@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A4B75;
+  --color-navy-dark: #063350;
+  --color-cyan: #00A3E0;
+  --color-cyan-light: #33b8e8;
+  --color-yellow: #F2B800;
+  --color-steel: #2D3137;
+  --color-steel-light: #3d4249;
+  --color-gray-light: #F8FAFC;
+  --color-gray-mid: #e2e8f0;
+  --color-gray-text: #64748b;
+  --font-inter: 'Inter', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-steel);
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Custom CSS from static site for components */
+.ticker-bar {
+  background: var(--color-steel);
+  padding: 14px 0;
+  overflow: hidden;
+  border-top: 3px solid var(--color-cyan);
+  border-bottom: 3px solid var(--color-yellow);
+}
+.ticker-track {
+  display: flex; gap: 0;
+  animation: ticker 30s linear infinite;
+  white-space: nowrap;
+}
+.ticker-track span {
+  display: inline-block;
+  color: var(--color-gray-mid);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0 32px;
+  position: relative;
+}
+.ticker-track span::after {
+  content: '\2B25';
+  position: absolute; right: 0;
+  color: var(--color-cyan); opacity: 0.6;
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.hero-scroll-indicator .scroll-dot {
+  width: 30px; height: 50px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 15px;
+  position: relative;
+}
+.hero-scroll-indicator .scroll-dot::after {
+  content: '';
+  position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+  width: 6px; height: 6px;
+  background: white; border-radius: 50%;
+  animation: scrollDown 2s ease infinite;
+}
+@keyframes scrollDown {
+  0% { top: 8px; opacity: 1; }
+  100% { top: 28px; opacity: 0; }
+}
+
+.revealed { opacity: 1 !important; transform: translateY(0) !important; }

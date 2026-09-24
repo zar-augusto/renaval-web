@@ -1,0 +1,85 @@
+---
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ReNaval – Soluciones Integrales de Ingeniería</title>
+		<meta name="description" content="ReNaval ofrece soluciones integrales de ingeniería: metalmecánica, montajes estructurales, mantenimiento de válvulas, equipos rotativos, HVAC, pintura y sandblasting, e ingeniería civil." />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<slot />
+		
+		<script>
+			// Navbar Scroll Effect
+			const navbar = document.getElementById('navbar');
+			if(navbar) {
+				window.addEventListener('scroll', () => {
+					navbar.classList.toggle('bg-[#063350]/98', window.scrollY > 50);
+					navbar.classList.toggle('shadow-lg', window.scrollY > 50);
+					navbar.classList.toggle('py-2', window.scrollY > 50);
+					navbar.classList.toggle('py-4', window.scrollY <= 50);
+				});
+			}
+
+			// Mobile Menu Toggle
+			const hamburger = document.getElementById('hamburger');
+			const navLinks = document.getElementById('navLinks');
+			if(hamburger && navLinks) {
+				hamburger.addEventListener('click', () => {
+					navLinks.classList.toggle('hidden');
+					navLinks.classList.toggle('flex');
+				});
+			}
+
+			// Scroll Reveal
+			const revealObserver = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('revealed');
+						revealObserver.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+			document.querySelectorAll('.reveal-elem').forEach(el => {
+				el.style.opacity = '0';
+				el.style.transform = 'translateY(24px)';
+				el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+				revealObserver.observe(el);
+			});
+
+			// Stats Counter
+			let statsAnimated = false;
+			const statsSection = document.querySelector('.stats-section');
+			function animateStats() {
+				if (statsAnimated || !statsSection) return;
+				const rect = statsSection.getBoundingClientRect();
+				if (rect.top < window.innerHeight - 100) {
+					statsAnimated = true;
+					document.querySelectorAll('.stat-number').forEach(el => {
+						const target = parseInt(el.getAttribute('data-target') || '0');
+						const duration = 1800;
+						const step = target / (duration / 16);
+						let current = 0;
+						const timer = setInterval(() => {
+							current = Math.min(current + step, target);
+							el.textContent = Math.round(current) + '+';
+							if (current >= target) clearInterval(timer);
+						}, 16);
+					});
+				}
+			}
+			window.addEventListener('scroll', animateStats);
+			animateStats();
+		</script>
+	</body>
+</html>

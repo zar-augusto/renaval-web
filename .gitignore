@@ -1,29 +1,24 @@
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-.Spotlight-V100
-.Trashes
+# build output
+dist/
+# generated types
+.astro/
 
-# Editor / IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Logs
-*.log
-npm-debug.log*
-
-# Dependencias (si en el futuro se usa npm)
+# dependencies
 node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
 .env
-.env.local
 .env.production
 
-# Build outputs
-dist/
-build/
-.cache/
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/

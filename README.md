@@ -1,6 +1,6 @@
 # ReNaval – Soluciones Integrales de Ingeniería
 
-Sitio web corporativo estático para **ReNaval**, empresa colombiana de ingeniería especializada en soluciones metalmecánicas, navales, industriales y civiles.
+Sitio web corporativo para **ReNaval**, empresa colombiana de ingeniería especializada en soluciones metalmecánicas, navales, industriales y civiles.
 
 🌐 **Sitio:** [www.renaval.com](https://www.renaval.com)
 

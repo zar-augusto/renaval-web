@@ -1,0 +1,267 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 py-4 bg-[#0A4B75]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
+    <div class="max-w-[1200px] mx-auto px-6 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center no-underline">
+        <img src="/images/logo.png" alt="ReNaval Logo" class="h-11 w-auto object-contain" />
+      </a>
+      <ul class="hidden md:flex items-center gap-2 list-none" id="navLinks">
+        <li><a href="#inicio" class="text-white/85 no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Inicio</a></li>
+        <li><a href="#nosotros" class="text-white/85 no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Nosotros</a></li>
+        <li><a href="#servicios" class="text-white/85 no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Servicios</a></li>
+        <li><a href="#experiencia" class="text-white/85 no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Experiencia</a></li>
+        <li><a href="#contacto" class="bg-[#F2B800] text-[#2D3137] font-bold rounded-lg px-4 py-2 transition-transform hover:-translate-y-px hover:bg-[#e0aa00]">Cotizar</a></li>
+      </ul>
+      <button class="md:hidden flex flex-col gap-1 bg-transparent border-none cursor-pointer p-1" id="hamburger" aria-label="Abrir menú">
+        <span class="block w-6 h-0.5 bg-white rounded-full"></span>
+        <span class="block w-6 h-0.5 bg-white rounded-full"></span>
+        <span class="block w-6 h-0.5 bg-white rounded-full"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen bg-gradient-to-br from-[#063350] via-[#0A4B75] to-[#1a7ab5] flex items-center justify-center relative overflow-hidden pt-[100px] px-6 pb-[60px]" id="inicio">
+    <div class="absolute inset-0 bg-[url('/images/hero-bg.png')] bg-center bg-cover bg-no-repeat opacity-12"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(0,163,224,0.15)_0%,transparent_60%)]"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#063350]/70 to-transparent"></div>
+    
+    <div class="relative z-10 text-center max-w-[780px] mx-auto">
+      <div class="flex flex-wrap gap-2.5 justify-center mb-8">
+        <span class="bg-white/10 border border-white/25 text-white text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm tracking-wide">PMI</span>
+        <span class="bg-white/10 border border-white/25 text-white text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm tracking-wide">ISO 9001</span>
+        <span class="bg-white/10 border border-white/25 text-white text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm tracking-wide">AWS D1.1-D1.7</span>
+        <span class="bg-white/10 border border-white/25 text-white text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm tracking-wide">IACS</span>
+      </div>
+      <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold text-white mb-5 leading-tight">
+        Soluciones Integrales<br/>
+        <span class="bg-gradient-to-r from-[#00A3E0] to-[#F2B800] bg-clip-text text-transparent">de Ingeniería</span>
+      </h1>
+      <p class="text-[clamp(1rem,2.5vw,1.2rem)] text-white/80 mb-10 leading-relaxed">
+        Aliados estratégicos para proyectos de ingeniería naval, industrial y civil.<br/>
+        Calidad, precisión y entrega de valor en cada operación.
+      </p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href="#servicios" class="inline-flex items-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-[#F2B800] text-[#2D3137] hover:bg-[#e0aa00] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(242,184,0,0.35)]">Ver Servicios</a>
+        <a href="#contacto" class="inline-flex items-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-transparent text-white border-2 border-white/40 hover:bg-white/10 hover:border-white hover:-translate-y-0.5">Solicitar Cotización</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-bar">
+    <div class="ticker-track">
+      <span>Ingeniería Naval</span>
+      <span>Metalmecánica</span>
+      <span>Montajes Estructurales</span>
+      <span>Mantenimiento de Válvulas</span>
+      <span>Equipos Rotativos</span>
+      <span>Sistemas HVAC</span>
+      <span>Pintura y Sandblasting</span>
+      <span>Ingeniería Civil</span>
+      <span>ISO 9001</span>
+      <span>PMI</span>
+      <span>Ingeniería Naval</span>
+      <span>Metalmecánica</span>
+      <span>Montajes Estructurales</span>
+      <span>Mantenimiento de Válvulas</span>
+      <span>Equipos Rotativos</span>
+      <span>Sistemas HVAC</span>
+      <span>Pintura y Sandblasting</span>
+      <span>Ingeniería Civil</span>
+      <span>ISO 9001</span>
+      <span>PMI</span>
+    </div>
+  </div>
+
+  <!-- QUIÉNES SOMOS -->
+  <section class="py-[100px] bg-[#F8FAFC]" id="nosotros">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
+        <div>
+          <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Quienes Somos</div>
+          <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Expertos que <span class="text-[#00A3E0]">generan confianza</span></h2>
+          <p class="text-[1.05rem] text-[#64748b] leading-relaxed mb-8">
+            Somos una empresa que proporciona soluciones en el área metalmecánica, mantenimiento a equipos rotativos, sistemas de aire acondicionado y adecuaciones locativas. Contamos con un equipo altamente competitivo, con gran experiencia en la industria para la gestión de procesos y proyectos, generando confianza y entrega de valor en cada operación.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-6">
+            <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-xl p-4 flex items-center gap-3 transition-all hover:border-[#00A3E0] hover:shadow-[0_4px_16px_rgba(0,163,224,0.1)] hover:-translate-y-0.5">
+              <div class="text-[1.4rem]">🎯</div>
+              <p class="text-[0.88rem] font-medium text-[#2D3137] m-0">Satisfacer las necesidades del cliente</p>
+            </div>
+            <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-xl p-4 flex items-center gap-3 transition-all hover:border-[#00A3E0] hover:shadow-[0_4px_16px_rgba(0,163,224,0.1)] hover:-translate-y-0.5" style="transition-delay: 100ms">
+              <div class="text-[1.4rem]">📈</div>
+              <p class="text-[0.88rem] font-medium text-[#2D3137] m-0">Mejorar la eficiencia y efectividad</p>
+            </div>
+            <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-xl p-4 flex items-center gap-3 transition-all hover:border-[#00A3E0] hover:shadow-[0_4px_16px_rgba(0,163,224,0.1)] hover:-translate-y-0.5" style="transition-delay: 200ms">
+              <div class="text-[1.4rem]">✅</div>
+              <p class="text-[0.88rem] font-medium text-[#2D3137] m-0">Lograr los resultados propuestos</p>
+            </div>
+            <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-xl p-4 flex items-center gap-3 transition-all hover:border-[#00A3E0] hover:shadow-[0_4px_16px_rgba(0,163,224,0.1)] hover:-translate-y-0.5" style="transition-delay: 300ms">
+              <div class="text-[1.4rem]">⏱️</div>
+              <p class="text-[0.88rem] font-medium text-[#2D3137] m-0">Cumplir plazos y presupuesto</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden shadow-[0_8px_48px_rgba(10,75,117,0.18)] group">
+          <img src="/images/quienes-somos.png" alt="Equipo ReNaval" class="w-full block transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute bottom-5 left-5 bg-[#F2B800] text-[#2D3137] font-bold text-[0.85rem] px-4 py-2 rounded-lg">
+            +10 años de experiencia
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN & VISIÓN -->
+  <section class="bg-gradient-to-br from-[#063350] to-[#0A4B75] py-20">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="reveal-elem bg-white/5 border border-white/10 rounded-2xl p-10 md:p-12 backdrop-blur-md transition-all hover:bg-white/10 hover:-translate-y-1 border-t-4 border-t-[#00A3E0]">
+          <div class="text-[2.5rem] mb-5">🚀</div>
+          <h3 class="text-2xl font-extrabold text-white mb-4">Misión</h3>
+          <p class="text-white/75 leading-relaxed m-0">Ser un aliado estratégico de nuestros clientes y brindarles soluciones que permitan contribuir al cumplimiento de sus objetivos, entregando productos y servicios de alta calidad con acompañamiento y asesoría en sus proyectos para contribuir al éxito de los mismos.</p>
+        </div>
+        <div class="reveal-elem bg-white/5 border border-white/10 rounded-2xl p-10 md:p-12 backdrop-blur-md transition-all hover:bg-white/10 hover:-translate-y-1 border-t-4 border-t-[#F2B800]" style="transition-delay: 150ms">
+          <div class="text-[2.5rem] mb-5">🌐</div>
+          <h3 class="text-2xl font-extrabold text-white mb-4">Visión</h3>
+          <p class="text-white/75 leading-relaxed m-0">Prestar servicio en el sector público y privado, con incursión en un mercado internacional, siendo la primera opción de nuestros clientes para sus proyectos y creciendo con ellos a través de una evolución constante apalancada en el mejoramiento continuo de procesos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="py-[100px] bg-[#F8FAFC]" id="servicios">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Portafolio Técnico</div>
+        <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Nuestras <span class="text-[#00A3E0]">8 Soluciones</span></h2>
+        <p class="text-[1.05rem] text-[#64748b] max-w-[560px] mx-auto">Capacidad técnica integral para proyectos industriales, navales y civiles de alta complejidad.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+          <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">01</div>
+          <div class="text-4xl mb-4 block">📋</div>
+          <h3 class="text-base font-bold text-[#2D3137] mb-3 leading-snug">Asesoría para Proyectos</h3>
+          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Gerencia y evaluación de parámetros en proyectos de construcción y reparación naval, estructuras metálicas y obras civiles mediante metodologías PMI.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">PMI</span>
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Gestión</span>
+          </div>
+        </div>
+
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 100ms">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+          <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">02</div>
+          <div class="text-4xl mb-4 block">🔩</div>
+          <h3 class="text-base font-bold text-[#2D3137] mb-3 leading-snug">Diseño y Fabricación Metalmecánica</h3>
+          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Elaboración de planos y fabricación de estructuras en láminas, perfiles IP y tuberías. Soldadura SMAW, MIG y TIG en múltiples materiales.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">SMAW</span>
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">MIG</span>
+          </div>
+        </div>
+
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 200ms">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+          <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">03</div>
+          <div class="text-4xl mb-4 block">🏗️</div>
+          <h3 class="text-base font-bold text-[#2D3137] mb-3 leading-snug">Montajes Estructurales</h3>
+          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Fabricación e izaje de elementos estructurales IP, soldadura en campo de alta resistencia y durabilidad para infraestructura industrial y naval.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Estructuras IP</span>
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Izaje</span>
+          </div>
+        </div>
+
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 300ms">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+          <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">04</div>
+          <div class="text-4xl mb-4 block">🔧</div>
+          <h3 class="text-base font-bold text-[#2D3137] mb-3 leading-snug">Mantenimiento de Válvulas</h3>
+          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Desarme completo de válvulas y actuadores, inspección ultrasónica, reparación de partes, ensamblaje y pruebas operativas de presión.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Ultrasonido</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="bg-gradient-to-br from-[#2D3137] to-[#063350] py-20 stats-section">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="p-6">
+          <div class="stat-number font-['Outfit'] text-[3.5rem] font-extrabold text-[#F2B800] leading-none mb-2" data-target="8">0</div>
+          <div class="text-sm font-medium text-white/70 tracking-wide">Soluciones Técnicas</div>
+        </div>
+        <div class="p-6">
+          <div class="stat-number font-['Outfit'] text-[3.5rem] font-extrabold text-[#F2B800] leading-none mb-2" data-target="100">0</div>
+          <div class="text-sm font-medium text-white/70 tracking-wide">Proyectos Ejecutados</div>
+        </div>
+        <div class="p-6">
+          <div class="stat-number font-['Outfit'] text-[3.5rem] font-extrabold text-[#F2B800] leading-none mb-2" data-target="10">0</div>
+          <div class="text-sm font-medium text-white/70 tracking-wide">Años de Experiencia</div>
+        </div>
+        <div class="p-6">
+          <div class="stat-number font-['Outfit'] text-[3.5rem] font-extrabold text-[#F2B800] leading-none mb-2" data-target="4">0</div>
+          <div class="text-sm font-medium text-white/70 tracking-wide">Certificaciones</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#2D3137] pt-[72px]">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12">
+        <div>
+          <img src="/images/logo.png" alt="ReNaval" class="h-12 w-auto mb-4 brightness-0 invert opacity-90" />
+          <p class="text-white/55 text-sm leading-relaxed mb-5">Soluciones Integrales de Ingeniería con calidad certificada y compromiso en cada proyecto.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-white/10 text-white/70 text-[0.75rem] font-semibold px-3 py-1 rounded-md">ISO 9001</span>
+            <span class="bg-white/10 text-white/70 text-[0.75rem] font-semibold px-3 py-1 rounded-md">PMI</span>
+            <span class="bg-white/10 text-white/70 text-[0.75rem] font-semibold px-3 py-1 rounded-md">AWS</span>
+            <span class="bg-white/10 text-white/70 text-[0.75rem] font-semibold px-3 py-1 rounded-md">IACS</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white text-base font-bold mb-5 pb-2.5 border-b-2 border-white/10">Navegación</h4>
+          <ul class="list-none flex flex-col gap-2.5 m-0 p-0">
+            <li><a href="#inicio" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Inicio</a></li>
+            <li><a href="#nosotros" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Nosotros</a></li>
+            <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Servicios</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-base font-bold mb-5 pb-2.5 border-b-2 border-white/10">Soluciones</h4>
+          <ul class="list-none flex flex-col gap-2.5 m-0 p-0">
+            <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Metalmecánica</a></li>
+            <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Montajes Estructurales</a></li>
+            <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Ingeniería Civil</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-base font-bold mb-5 pb-2.5 border-b-2 border-white/10">Contacto</h4>
+          <p class="text-white/55 text-sm mb-2.5">📞 311 335 6201</p>
+          <p class="text-white/55 text-sm mb-2.5">✉️ ingbartelemy24@gmail.com</p>
+          <p class="text-white/55 text-sm mb-2.5">🌐 www.renaval.com</p>
+        </div>
+      </div>
+      <div class="border-t border-white/10 py-6 text-center">
+        <p class="text-white/35 text-[0.85rem] m-0">&copy; 2024 ReNaval – Soluciones Integrales de Ingeniería. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</Layout>
