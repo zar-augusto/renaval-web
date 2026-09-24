@@ -198,6 +198,114 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- EXPERIENCIA -->
+  <section class="py-[100px]" id="experiencia">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
+        <div class="order-2 md:order-1 relative rounded-2xl overflow-hidden shadow-[0_8px_48px_rgba(10,75,117,0.18)]">
+          <img src="/images/socios.png" alt="Experiencia de los socios" class="w-full block" />
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Trayectoria Comprobada</div>
+          <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Experiencia de <span class="text-[#00A3E0]">los Socios</span></h2>
+          <p class="text-[1.05rem] text-[#64748b] leading-relaxed mb-8">
+            Proyectos desarrollados bajo la guía del PMI en sectores de la industria manufacturera: transformación del acero y la madera, con normas de calidad ISO 9001, AWS D1.1–D1.7, e IACS para fabricación y reparación de embarcaciones marítimas y fluviales. Liderazgo con LEAN, SMED, TPM y KAIZEN.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-[#0A4B75] text-white text-[0.75rem] font-bold px-3 py-1.5 rounded-md">ISO 9001</span>
+            <span class="bg-[#00A3E0] text-white text-[0.75rem] font-bold px-3 py-1.5 rounded-md">AWS D1.1–D1.7</span>
+            <span class="bg-[#F2B800] text-[#2D3137] text-[0.75rem] font-bold px-3 py-1.5 rounded-md">PMI</span>
+            <span class="bg-[#0A4B75] text-white text-[0.75rem] font-bold px-3 py-1.5 rounded-md">IACS</span>
+            <span class="bg-[#00A3E0] text-white text-[0.75rem] font-bold px-3 py-1.5 rounded-md">LEAN</span>
+            <span class="bg-[#F2B800] text-[#2D3137] text-[0.75rem] font-bold px-3 py-1.5 rounded-md">KAIZEN</span>
+            <span class="bg-[#0A4B75] text-white text-[0.75rem] font-bold px-3 py-1.5 rounded-md">TPM</span>
+            <span class="bg-[#00A3E0] text-white text-[0.75rem] font-bold px-3 py-1.5 rounded-md">SMED</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="py-[100px] bg-[#F8FAFC]" id="contacto">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Contáctenos</div>
+        <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Solicite su <span class="text-[#00A3E0]">Cotización</span></h2>
+        <p class="text-[1.05rem] text-[#64748b] max-w-[560px] mx-auto">Cuéntenos su proyecto y un especialista de ReNaval se pondrá en contacto a la brevedad.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div class="lg:col-span-2 bg-white border border-[#e2e8f0] rounded-2xl p-8 shadow-[0_8px_32px_rgba(10,75,117,0.06)]">
+          <form id="contactForm" class="flex flex-col gap-5">
+            <!-- Honeypot para seguridad contra bots (SPAM) -->
+            <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
+            
+            <div>
+              <label for="nombre" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label for="empresa" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Empresa</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Su empresa" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+              </div>
+              <div>
+                <label for="telefono" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="3XX XXX XXXX" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+              </div>
+            </div>
+            <div>
+              <label for="email" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Correo electrónico *</label>
+              <input type="email" id="email" name="email" placeholder="correo@empresa.com" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+            </div>
+            <div>
+              <label for="servicio" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Servicio de interés *</label>
+              <select id="servicio" name="servicio" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors appearance-none">
+                <option value="" disabled selected>Seleccione una solución</option>
+                <option>Asesoría para Proyectos</option>
+                <option>Diseño y Fabricación Metalmecánica</option>
+                <option>Montajes Estructurales</option>
+                <option>Mantenimiento de Válvulas</option>
+                <option>Mantenimiento Equipos Rotativos</option>
+                <option>Montajes y Mantenimiento HVAC</option>
+                <option>Pintura y Sandblasting</option>
+                <option>Ingeniería Civil</option>
+              </select>
+            </div>
+            <div>
+              <label for="mensaje" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Descripción del proyecto *</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describa brevemente su proyecto o requerimiento..." required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors resize-y"></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="bg-[#0A4B75] text-white font-bold text-[1.05rem] p-4 rounded-lg mt-2 transition-all hover:bg-[#063350] hover:-translate-y-0.5 shadow-[0_4px_12px_rgba(10,75,117,0.2)]">Enviar Solicitud &rarr;</button>
+            <div id="formSuccess" class="hidden bg-green-50 text-green-700 border border-green-200 p-4 rounded-lg text-sm text-center font-medium mt-2">Solicitud enviada exitosamente. Nos pondremos en contacto pronto.</div>
+            <div id="formError" class="hidden bg-red-50 text-red-700 border border-red-200 p-4 rounded-lg text-sm text-center font-medium mt-2">Hubo un error al enviar la solicitud. Verifique su conexión e intente nuevamente.</div>
+          </form>
+        </div>
+        <div class="lg:col-span-1">
+          <div class="bg-gradient-to-br from-[#063350] to-[#0A4B75] rounded-2xl p-8 text-center text-white sticky top-24">
+            <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-2 border-white/20">BB</div>
+            <h3 class="text-xl font-bold mb-1">Bayron Bartelemy</h3>
+            <p class="text-[#00A3E0] text-sm font-semibold mb-8">Gerente de Proyecto</p>
+            <div class="flex flex-col gap-4 text-left">
+              <a href="tel:3113356201" class="flex items-center gap-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors no-underline text-white group" rel="noopener noreferrer">
+                <span class="text-xl group-hover:scale-110 transition-transform">📞</span>
+                <div><small class="block text-white/55 text-xs">Celular 1</small><strong>311 335 6201</strong></div>
+              </a>
+              <a href="tel:3205419121" class="flex items-center gap-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors no-underline text-white group" rel="noopener noreferrer">
+                <span class="text-xl group-hover:scale-110 transition-transform">📱</span>
+                <div><small class="block text-white/55 text-xs">Celular 2</small><strong>320 541 9121</strong></div>
+              </a>
+              <a href="mailto:ingbartelemy24@gmail.com" class="flex items-center gap-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors no-underline text-white group" rel="noopener noreferrer">
+                <span class="text-xl group-hover:scale-110 transition-transform">✉️</span>
+                <div><small class="block text-white/55 text-xs">Correo</small><strong>ingbartelemy24@gmail.com</strong></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STATS -->
   <section class="bg-gradient-to-br from-[#2D3137] to-[#063350] py-20 stats-section">
     <div class="max-w-[1200px] mx-auto px-6">
@@ -264,4 +372,65 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </footer>
+
+  <script>
+    import { supabase } from '../lib/supabase';
+
+    const form = document.getElementById('contactForm') as HTMLFormElement;
+    const successMsg = document.getElementById('formSuccess');
+    const errorMsg = document.getElementById('formError');
+    const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        
+        // Honeypot check
+        if (data._honeypot) {
+          // If honeypot is filled, it's a bot. Just show success to trick it.
+          if (successMsg) successMsg.classList.remove('hidden');
+          form.reset();
+          return;
+        }
+        
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Enviando...';
+        }
+        
+        try {
+          const { error } = await supabase
+            .from('contactos')
+            .insert([
+              { 
+                nombre: data.nombre, 
+                empresa: data.empresa || '', 
+                telefono: data.telefono, 
+                email: data.email, 
+                servicio: data.servicio, 
+                mensaje: data.mensaje 
+              }
+            ]);
+            
+          if (error) throw error;
+          
+          if (successMsg) successMsg.classList.remove('hidden');
+          if (errorMsg) errorMsg.classList.add('hidden');
+          form.reset();
+        } catch (error) {
+          console.error('Error al enviar:', error);
+          if (errorMsg) errorMsg.classList.remove('hidden');
+          if (successMsg) successMsg.classList.add('hidden');
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Enviar Solicitud &rarr;';
+          }
+        }
+      });
+    }
+  </script>
 </Layout>
