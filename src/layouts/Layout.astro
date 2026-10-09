@@ -7,79 +7,130 @@ import '../styles/global.css';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>ReNaval – Soluciones Integrales de Ingeniería</title>
-		<meta name="description" content="ReNaval ofrece soluciones integrales de ingeniería: metalmecánica, montajes estructurales, mantenimiento de válvulas, equipos rotativos, HVAC, pintura y sandblasting, e ingeniería civil." />
+
+		<!-- SEO Primario -->
+		<title>ReNaval – Soluciones Integrales de Ingeniería Naval y Metalúrgica</title>
+		<meta name="description" content="ReNaval: empresa especializada en ingeniería naval, metalmecánica, montajes estructurales, mantenimiento de válvulas y equipos rotativos en Colombia. +10 años de experiencia. Cotización gratuita." />
+		<meta name="keywords" content="ingeniería naval, metalmecánica, mantenimiento industrial, soldadura naval, válvulas, equipos rotativos, HVAC, sandblasting, pintura anticorrosiva, Colombia, Barranquilla" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="ReNaval – Soluciones Integrales de Ingeniería" />
+		<link rel="canonical" href="https://renaval.vercel.app/" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://renaval.vercel.app/" />
+		<meta property="og:title" content="ReNaval – Soluciones Integrales de Ingeniería Naval y Metalúrgica" />
+		<meta property="og:description" content="Aliados estratégicos en ingeniería naval, metalmecánica y mantenimiento industrial. Calidad certificada y +10 años de experiencia en Colombia." />
+		<meta property="og:image" content="https://renaval.vercel.app/images/quienes-somos-new.jpg" />
+		<meta property="og:locale" content="es_CO" />
+		<meta property="og:site_name" content="ReNaval" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="ReNaval – Soluciones Integrales de Ingeniería" />
+		<meta name="twitter:description" content="Aliados estratégicos en ingeniería naval y metalmecánica. +10 años de experiencia en Colombia." />
+		<meta name="twitter:image" content="https://renaval.vercel.app/images/quienes-somos-new.jpg" />
+
+		<!-- Favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Fuentes Google (preconnect optimizado) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+		<!-- Structured Data: LocalBusiness -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "ReNaval – Soluciones Integrales de Ingeniería",
+			"description": "Empresa especializada en ingeniería naval, metalmecánica, montajes estructurales, mantenimiento de válvulas y equipos rotativos.",
+			"url": "https://renaval.vercel.app",
+			"telephone": "+573113356201",
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "CO"
+			},
+			"sameAs": ["https://wa.me/573113356201"]
+		}
+		</script>
 	</head>
 	<body>
 		<slot />
-		
+
 		<script>
 			// Navbar Scroll Effect
 			const navbar = document.getElementById('navbar');
-			if(navbar) {
+			if (navbar) {
 				window.addEventListener('scroll', () => {
-					navbar.classList.toggle('bg-[#063350]/98', window.scrollY > 50);
-					navbar.classList.toggle('shadow-lg', window.scrollY > 50);
-					navbar.classList.toggle('py-2', window.scrollY > 50);
-					navbar.classList.toggle('py-4', window.scrollY <= 50);
-				});
+					const scrolled = window.scrollY > 50;
+					navbar.classList.toggle('bg-[#063350]/98', scrolled);
+					navbar.classList.toggle('shadow-lg', scrolled);
+					navbar.classList.toggle('py-2', scrolled);
+					navbar.classList.toggle('py-4', !scrolled);
+				}, { passive: true });
 			}
 
-			// Mobile Menu Toggle
+			// Mobile Menu Toggle – menú desplegable mejorado
 			const hamburger = document.getElementById('hamburger');
 			const navLinks = document.getElementById('navLinks');
-			if(hamburger && navLinks) {
-				hamburger.addEventListener('click', () => {
-					navLinks.classList.toggle('hidden');
-					navLinks.classList.toggle('flex');
+			let menuOpen = false;
+
+			function openMenu() {
+				menuOpen = true;
+				navLinks!.classList.remove('hidden');
+				navLinks!.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-[#0A4B75]', 'px-6', 'py-4', 'gap-1', 'shadow-xl', 'border-t', 'border-white/10');
+				hamburger!.setAttribute('aria-expanded', 'true');
+			}
+			function closeMenu() {
+				menuOpen = false;
+				navLinks!.classList.add('hidden');
+				navLinks!.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'right-0', 'bg-[#0A4B75]', 'px-6', 'py-4', 'gap-1', 'shadow-xl', 'border-t', 'border-white/10');
+				hamburger!.setAttribute('aria-expanded', 'false');
+			}
+
+			if (hamburger && navLinks) {
+				hamburger.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+				navLinks.querySelectorAll('a').forEach(link => {
+					link.addEventListener('click', closeMenu);
+				});
+				// Cerrar con ESC
+				document.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape' && menuOpen) closeMenu();
 				});
 			}
 
-			// Scroll Reveal
+			// Scroll Reveal con IntersectionObserver
 			const revealObserver = new IntersectionObserver((entries) => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
-						entry.target.classList.add('revealed');
+						(entry.target as HTMLElement).style.opacity = '1';
+						(entry.target as HTMLElement).style.transform = 'translateY(0)';
 						revealObserver.unobserve(entry.target);
 					}
 				});
-			}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+			}, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
 
 			document.querySelectorAll('.reveal-elem').forEach(el => {
-				el.style.opacity = '0';
-				el.style.transform = 'translateY(24px)';
-				el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+				(el as HTMLElement).style.opacity = '0';
+				(el as HTMLElement).style.transform = 'translateY(24px)';
+				(el as HTMLElement).style.transition = 'opacity 0.55s ease, transform 0.55s ease';
 				revealObserver.observe(el);
 			});
-
-			// Stats Counter
-			let statsAnimated = false;
-			const statsSection = document.querySelector('.stats-section');
-			function animateStats() {
-				if (statsAnimated || !statsSection) return;
-				const rect = statsSection.getBoundingClientRect();
-				if (rect.top < window.innerHeight - 100) {
-					statsAnimated = true;
-					document.querySelectorAll('.stat-number').forEach(el => {
-						const target = parseInt(el.getAttribute('data-target') || '0');
-						const duration = 1800;
-						const step = target / (duration / 16);
-						let current = 0;
-						const timer = setInterval(() => {
-							current = Math.min(current + step, target);
-							el.textContent = Math.round(current) + '+';
-							if (current >= target) clearInterval(timer);
-						}, 16);
-					});
-				}
-			}
-			window.addEventListener('scroll', animateStats);
-			animateStats();
 		</script>
+
+		<!-- WhatsApp Floating Button -->
+		<a href="https://wa.me/573113356201?text=Hola%20ReNaval,%20me%20gustar%C3%ADa%20cotizar%20un%20servicio."
+		   class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_6px_20px_rgba(37,211,102,0.6)] transition-all duration-300 z-[60] flex items-center justify-center group"
+		   target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+				<path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.3 6.3 0 0 1-3.218-.88l-.23-.136-2.394.629.638-2.336-.15-.238a6.2 6.2 0 0 1-.951-3.326c.004-3.483 2.839-6.32 6.32-6.32 1.688 0 3.275.658 4.47 1.854s1.855 2.78 1.854 4.47c-.004 3.484-2.84 6.32-6.321 6.32zM11.464 9.42c-.19-.095-1.123-.554-1.298-.617-.174-.064-.3-.095-.427.095-.126.19-.49.617-.6.743-.11.127-.221.143-.41.048-.19-.095-.802-.296-1.528-.941-.565-.503-.946-1.125-1.056-1.315-.11-.19-.012-.293.082-.388.085-.085.19-.222.285-.333.095-.111.127-.19.19-.317.064-.127.032-.238-.015-.333-.048-.095-.427-1.029-.585-1.41-.154-.372-.31-.322-.427-.328-.11-.006-.238-.006-.366-.006a.7.7 0 0 0-.525.244c-.19.19-.728.712-.728 1.737s.745 2.015.85 2.158c.105.143 1.472 2.247 3.567 3.152.498.215.886.344 1.189.44.5.158.956.135 1.316.082.404-.06.124-.503 1.34-1.022.215-.519.215-.964.15-1.057-.064-.093-.238-.15-.428-.244z"/>
+			</svg>
+			<span class="absolute right-full mr-4 bg-white text-[#2D3137] text-sm font-bold px-4 py-2 rounded-lg shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-gray-100">
+				¡Cotiza ahora!
+			</span>
+		</a>
 	</body>
 </html>
