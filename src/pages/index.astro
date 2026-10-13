@@ -224,165 +224,237 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-[1.05rem] text-[#64748b] max-w-[560px] mx-auto">Una muestra de nuestra capacidad técnica en proyectos navales, metalúrgicos y de mantenimiento industrial.</p>
       </div>
 
-      <!-- Grid galería -->
-      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4" id="gallery-grid">
+      <!-- CARRUSEL -->
+      <div class="relative" id="gallery-carousel">
 
-        <!-- Foto 1: Soldadura en casco barco (chispas) -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-15-52.jpg', 'Soldadura en casco de embarcación')">
-          <img src="/images/PHOTO-2026-09-25-07-15-52.jpg" alt="Soldadura en casco de embarcación"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Soldadura Naval</span>
+        <!-- Slide principal -->
+        <div class="relative overflow-hidden rounded-2xl shadow-[0_12px_48px_rgba(10,75,117,0.18)] bg-[#1a2332] cursor-zoom-in"
+             id="carousel-main" style="height:clamp(300px,55vw,600px);">
+          <img id="carousel-img" src="/images/PHOTO-2026-09-25-07-15-52.jpg" alt="Soldadura en casco de embarcación"
+               class="w-full h-full object-cover" style="transition:opacity .22s ease;" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">
+            <div>
+              <p id="carousel-caption" class="text-white font-bold text-lg leading-tight drop-shadow">Soldadura Naval</p>
+              <p id="carousel-sub" class="text-white/70 text-sm mt-0.5">Foto 1 de 12</p>
+            </div>
+            <button id="carousel-zoom-btn"
+                    class="bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2.5 rounded-lg transition-all border border-white/20"
+                    aria-label="Ver en zoom">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 17A6 6 0 1 0 11 5a6 6 0 0 0 0 12zm-3-6h6m-3-3v6"/>
+              </svg>
+            </button>
           </div>
         </div>
 
-        <!-- Foto 2: Estructura metálica interior -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-15-52 2.jpg', 'Fabricación de estructura metálica en interior')">
-          <img src="/images/PHOTO-2026-09-25-07-15-52 2.jpg" alt="Fabricación de estructura metálica"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Estructuras Metálicas</span>
-          </div>
-        </div>
+        <!-- Flecha izquierda -->
+        <button id="prev-btn"
+                class="absolute left-3 z-10 bg-white/90 hover:bg-white text-[#0A4B75] w-11 h-11 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 border border-white/50"
+                style="top:calc(clamp(300px,55vw,600px)/2 - 22px);"
+                aria-label="Foto anterior">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
 
-        <!-- Foto 3: Técnico ReNaval en sala de máquinas -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-16-05 2.jpg', 'Técnico ReNaval en sala de máquinas')">
-          <img src="/images/PHOTO-2026-09-25-07-16-05 2.jpg" alt="Técnico ReNaval en sala de máquinas"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Mantenimiento de Equipos</span>
-          </div>
-        </div>
+        <!-- Flecha derecha -->
+        <button id="next-btn"
+                class="absolute right-3 z-10 bg-white/90 hover:bg-white text-[#0A4B75] w-11 h-11 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 border border-white/50"
+                style="top:calc(clamp(300px,55vw,600px)/2 - 22px);"
+                aria-label="Foto siguiente">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
 
-        <!-- Foto 4: Soldador ReNaval en cubierta barco -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-16-02.jpg', 'Soldador ReNaval trabajando en cubierta')">
-          <img src="/images/PHOTO-2026-09-25-07-16-02.jpg" alt="Soldador ReNaval en cubierta"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Operaciones en Cubierta</span>
-          </div>
-        </div>
+        <!-- Miniaturas -->
+        <div class="mt-4 flex gap-3 overflow-x-auto pb-2" id="carousel-thumbs"
+             style="scrollbar-width:thin;scrollbar-color:#00A3E0 #e2e8f0;"></div>
 
-        <!-- Foto 5: Estructura naval gris terminada -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-15-56 2.jpg', 'Estructura naval fabricada y pintada')">
-          <img src="/images/PHOTO-2026-09-25-07-15-56 2.jpg" alt="Estructura naval fabricada"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Fabricación Naval</span>
-          </div>
-        </div>
+        <!-- Puntos indicadores -->
+        <div class="flex justify-center gap-2 mt-5" id="carousel-dots"></div>
 
-        <!-- Foto 6: Válvulas grises restauradas -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-16-05 4.jpg', 'Válvulas industriales restauradas')">
-          <img src="/images/PHOTO-2026-09-25-07-16-05 4.jpg" alt="Válvulas industriales restauradas"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Mantenimiento de Válvulas</span>
-          </div>
-        </div>
-
-        <!-- Foto 7: Casco barco en astillero -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-15-55.jpg', 'Reparación de casco en astillero')">
-          <img src="/images/PHOTO-2026-09-25-07-15-55.jpg" alt="Reparación de casco en astillero"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Reparación de Cascos</span>
-          </div>
-        </div>
-
-        <!-- Foto 8: Tuberías inoxidables en cubierta -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-16-01.jpg', 'Tuberías en acero inoxidable fabricadas')">
-          <img src="/images/PHOTO-2026-09-25-07-16-01.jpg" alt="Tuberías en acero inoxidable"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Tuberías Industriales</span>
-          </div>
-        </div>
-
-        <!-- Foto 9: Válvula roja mantenimiento -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-16-05.jpg', 'Válvula restaurada y pintada')">
-          <img src="/images/PHOTO-2026-09-25-07-16-05.jpg" alt="Válvula restaurada"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Overhaul de Válvulas</span>
-          </div>
-        </div>
-
-        <!-- Foto 10: Pintura casco rojo barco -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-15-56.jpg', 'Pintura anticorrosiva en casco de embarcación')">
-          <img src="/images/PHOTO-2026-09-25-07-15-56.jpg" alt="Pintura en casco de embarcación"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Pintura Anticorrosiva</span>
-          </div>
-        </div>
-
-        <!-- Foto 11: Soldadura muelle barco RMCA -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-16-04.jpg', 'Trabajo en muelle - soldadura y reparaciones')">
-          <img src="/images/PHOTO-2026-09-25-07-16-04.jpg" alt="Trabajo en muelle"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Trabajos en Muelle</span>
-          </div>
-        </div>
-
-        <!-- Foto 12: Escalerilla aluminio -->
-        <div class="gallery-item break-inside-avoid group relative overflow-hidden rounded-xl shadow-[0_4px_24px_rgba(10,75,117,0.12)] cursor-pointer"
-             onclick="openLightbox('/images/PHOTO-2026-09-25-07-16-04 4.jpg', 'Fabricación de escalera en aluminio para embarcación')">
-          <img src="/images/PHOTO-2026-09-25-07-16-04 4.jpg" alt="Escalera aluminio para embarcación"
-               class="w-full block transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0A4B75]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <span class="text-white text-sm font-semibold">Fabricación en Aluminio</span>
-          </div>
-        </div>
-
-      </div>
+      </div><!-- /gallery-carousel -->
     </div>
   </section>
 
-  <!-- LIGHTBOX -->
-  <div id="lightbox" class="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-    <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white/70 hover:text-white text-4xl leading-none transition-colors" aria-label="Cerrar">&times;</button>
-    <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center gap-4">
-      <img id="lightbox-img" src="" alt="" class="max-h-[80vh] max-w-full rounded-xl shadow-2xl object-contain" />
-      <p id="lightbox-caption" class="text-white/80 text-sm text-center"></p>
+  <!-- LIGHTBOX ZOOM -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Zoom de imagen"
+       class="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+       style="background:rgba(0,0,0,0.93);opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(8px);">
+
+    <button id="lb-close"
+            class="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 hover:bg-white/25 w-11 h-11 rounded-full flex items-center justify-center text-2xl transition-all z-10"
+            aria-label="Cerrar">&#x2715;</button>
+
+    <button id="lb-prev"
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all z-10"
+            aria-label="Anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+      </svg>
+    </button>
+
+    <div class="flex flex-col items-center gap-3 max-w-5xl w-full">
+      <img id="lb-img" src="" alt="" class="max-h-[80vh] max-w-full rounded-xl shadow-2xl object-contain select-none"
+           style="transition:opacity .2s ease;" />
+      <div class="flex items-center gap-3">
+        <p id="lb-caption" class="text-white/85 text-sm font-semibold text-center"></p>
+        <span id="lb-counter" class="text-white/45 text-xs whitespace-nowrap"></span>
+      </div>
     </div>
+
+    <button id="lb-next"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all z-10"
+            aria-label="Siguiente">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
   </div>
 
   <script>
-    function openLightbox(src, caption) {
-      const lb = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      const cap = document.getElementById('lightbox-caption');
-      img.src = src;
-      img.alt = caption;
-      cap.textContent = caption;
-      lb.classList.remove('opacity-0', 'pointer-events-none');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      const lb = document.getElementById('lightbox');
-      lb.classList.add('opacity-0', 'pointer-events-none');
-      document.body.style.overflow = '';
-    }
-    document.getElementById('lightbox').addEventListener('click', function(e) {
-      if (e.target === this) closeLightbox();
-    });
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeLightbox();
-    });
+    (function () {
+      const GALLERY = [
+        { src: '/images/PHOTO-2026-09-25-07-15-52.jpg',   label: 'Soldadura Naval',           desc: 'Soldadura en casco de embarcaci\u00f3n' },
+        { src: '/images/PHOTO-2026-09-25-07-15-52 2.jpg', label: 'Estructuras Met\u00e1licas',     desc: 'Fabricaci\u00f3n de estructura met\u00e1lica en interior' },
+        { src: '/images/PHOTO-2026-09-25-07-16-05 2.jpg', label: 'Mantenimiento de Equipos',  desc: 'T\u00e9cnico ReNaval en sala de m\u00e1quinas' },
+        { src: '/images/PHOTO-2026-09-25-07-16-02.jpg',   label: 'Operaciones en Cubierta',   desc: 'Soldador ReNaval trabajando en cubierta' },
+        { src: '/images/PHOTO-2026-09-25-07-15-56 2.jpg', label: 'Fabricaci\u00f3n Naval',         desc: 'Estructura naval fabricada y pintada' },
+        { src: '/images/PHOTO-2026-09-25-07-16-05 4.jpg', label: 'Mantenimiento de V\u00e1lvulas', desc: 'V\u00e1lvulas industriales restauradas' },
+        { src: '/images/PHOTO-2026-09-25-07-15-55.jpg',   label: 'Reparaci\u00f3n de Cascos',      desc: 'Reparaci\u00f3n de casco en astillero' },
+        { src: '/images/PHOTO-2026-09-25-07-16-01.jpg',   label: 'Tuber\u00edas Industriales',     desc: 'Tuber\u00edas en acero inoxidable fabricadas' },
+        { src: '/images/PHOTO-2026-09-25-07-16-05.jpg',   label: 'Overhaul de V\u00e1lvulas',      desc: 'V\u00e1lvula restaurada y pintada' },
+        { src: '/images/PHOTO-2026-09-25-07-15-56.jpg',   label: 'Pintura Anticorrosiva',     desc: 'Pintura anticorrosiva en casco de embarcaci\u00f3n' },
+        { src: '/images/PHOTO-2026-09-25-07-16-04.jpg',   label: 'Trabajos en Muelle',        desc: 'Trabajo en muelle - soldadura y reparaciones' },
+        { src: '/images/PHOTO-2026-09-25-07-16-04 4.jpg', label: 'Fabricaci\u00f3n en Aluminio',   desc: 'Escalera en aluminio para embarcaci\u00f3n' },
+      ];
+
+      let idx = 0;
+      let lbOpen = false;
+      let autoTimer = null;
+
+      const cImg   = document.getElementById('carousel-img');
+      const cCap   = document.getElementById('carousel-caption');
+      const cSub   = document.getElementById('carousel-sub');
+      const thumbs = document.getElementById('carousel-thumbs');
+      const dots   = document.getElementById('carousel-dots');
+      const lb     = document.getElementById('lightbox');
+      const lbImg  = document.getElementById('lb-img');
+      const lbCap  = document.getElementById('lb-caption');
+      const lbCnt  = document.getElementById('lb-counter');
+
+      // Construir miniaturas y dots
+      GALLERY.forEach(function(item, i) {
+        var th = document.createElement('button');
+        th.className = 'flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all focus:outline-none ' +
+                       (i === 0 ? 'border-[#00A3E0] opacity-100 scale-105' : 'border-transparent opacity-55 hover:opacity-85');
+        th.setAttribute('aria-label', item.label);
+        th.innerHTML = '<img src="' + item.src + '" alt="' + item.label + '" class="w-full h-full object-cover" loading="lazy"/>';
+        th.addEventListener('click', function() { goTo(i); });
+        thumbs.appendChild(th);
+
+        var d = document.createElement('button');
+        d.className = 'rounded-full border-none cursor-pointer focus:outline-none transition-all';
+        d.style.cssText = 'height:8px;background:' + (i === 0 ? '#00A3E0' : '#cbd5e1') + ';width:' + (i === 0 ? '24' : '8') + 'px;';
+        d.setAttribute('aria-label', 'Foto ' + (i + 1));
+        d.addEventListener('click', function() { goTo(i); });
+        dots.appendChild(d);
+      });
+
+      function goTo(n) {
+        idx = ((n % GALLERY.length) + GALLERY.length) % GALLERY.length;
+        var item = GALLERY[idx];
+
+        cImg.style.opacity = '0';
+        setTimeout(function() { cImg.src = item.src; cImg.alt = item.desc; cImg.style.opacity = '1'; }, 180);
+        cCap.textContent = item.label;
+        cSub.textContent = 'Foto ' + (idx + 1) + ' de ' + GALLERY.length;
+
+        thumbs.querySelectorAll('button').forEach(function(t, i) {
+          t.className = 'flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all focus:outline-none ' +
+                        (i === idx ? 'border-[#00A3E0] opacity-100 scale-105' : 'border-transparent opacity-55 hover:opacity-85');
+          if (i === idx) t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
+
+        dots.querySelectorAll('button').forEach(function(d, i) {
+          d.style.background = i === idx ? '#00A3E0' : '#cbd5e1';
+          d.style.width = (i === idx ? 24 : 8) + 'px';
+        });
+
+        if (lbOpen) syncLb();
+      }
+
+      function syncLb() {
+        var item = GALLERY[idx];
+        lbImg.style.opacity = '0';
+        setTimeout(function() { lbImg.src = item.src; lbImg.alt = item.desc; lbImg.style.opacity = '1'; }, 150);
+        lbCap.textContent = item.label;
+        lbCnt.textContent = (idx + 1) + ' / ' + GALLERY.length;
+      }
+
+      function openLb() {
+        syncLb();
+        lb.style.opacity = '1';
+        lb.style.pointerEvents = 'all';
+        document.body.style.overflow = 'hidden';
+        lbOpen = true;
+        stopAuto();
+      }
+
+      function closeLb() {
+        lb.style.opacity = '0';
+        lb.style.pointerEvents = 'none';
+        document.body.style.overflow = '';
+        lbOpen = false;
+        startAuto();
+      }
+
+      function startAuto() { autoTimer = setInterval(function() { goTo(idx + 1); }, 5000); }
+      function stopAuto()  { clearInterval(autoTimer); }
+
+      // Controles carrusel
+      document.getElementById('prev-btn').addEventListener('click', function() { goTo(idx - 1); });
+      document.getElementById('next-btn').addEventListener('click', function() { goTo(idx + 1); });
+      document.getElementById('carousel-main').addEventListener('click', openLb);
+      document.getElementById('carousel-zoom-btn').addEventListener('click', function(e) { e.stopPropagation(); openLb(); });
+
+      var wrap = document.getElementById('gallery-carousel');
+      wrap.addEventListener('mouseenter', stopAuto);
+      wrap.addEventListener('mouseleave', function() { if (!lbOpen) startAuto(); });
+      startAuto();
+
+      // Swipe carrusel
+      var tsx = 0;
+      var cs = document.getElementById('carousel-main');
+      cs.addEventListener('touchstart', function(e) { tsx = e.touches[0].clientX; }, { passive: true });
+      cs.addEventListener('touchend', function(e) {
+        if (Math.abs(tsx - e.changedTouches[0].clientX) > 40) goTo(tsx > e.changedTouches[0].clientX ? idx + 1 : idx - 1);
+      }, { passive: true });
+
+      // Controles lightbox
+      document.getElementById('lb-close').addEventListener('click', closeLb);
+      document.getElementById('lb-prev').addEventListener('click', function(e) { e.stopPropagation(); goTo(idx - 1); });
+      document.getElementById('lb-next').addEventListener('click', function(e) { e.stopPropagation(); goTo(idx + 1); });
+      lb.addEventListener('click', function(e) { if (e.target === lb) closeLb(); });
+
+      document.addEventListener('keydown', function(e) {
+        if (!lbOpen) return;
+        if (e.key === 'Escape') closeLb();
+        if (e.key === 'ArrowLeft')  goTo(idx - 1);
+        if (e.key === 'ArrowRight') goTo(idx + 1);
+      });
+
+      // Swipe lightbox
+      var lbx = 0;
+      lb.addEventListener('touchstart', function(e) { lbx = e.touches[0].clientX; }, { passive: true });
+      lb.addEventListener('touchend', function(e) {
+        if (Math.abs(lbx - e.changedTouches[0].clientX) > 40) goTo(lbx > e.changedTouches[0].clientX ? idx + 1 : idx - 1);
+      }, { passive: true });
+    })();
   </script>
+
 
   <!-- CONTACTO -->
 
