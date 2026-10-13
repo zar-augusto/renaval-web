@@ -4,20 +4,20 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
   <!-- NAVBAR -->
-  <nav class="fixed top-0 left-0 right-0 z-50 py-4 bg-[#0A4B75]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
-    <div class="max-w-[1200px] mx-auto px-6 flex items-center justify-between">
-      <a href="#inicio" class="flex items-center no-underline">
-        <img src="/images/logo.png" alt="ReNaval Logo" class="h-11 w-auto object-contain" />
+  <nav class="fixed top-0 left-0 right-0 z-50 py-3.5 sm:py-4 bg-[#0A4B75]/95 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <a href="#inicio" class="flex items-center no-underline" aria-label="ReNaval Inicio">
+        <img src="/images/logo.png" alt="ReNaval Logo" class="h-10 sm:h-11 w-auto object-contain" />
       </a>
-      <ul class="hidden md:flex items-center gap-2 list-none" id="navLinks">
-        <li><a href="#inicio" class="text-white/85 no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Inicio</a></li>
-        <li><a href="#nosotros" class="text-white/85 no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Nosotros</a></li>
-        <li><a href="#servicios" class="text-white/85 no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Servicios</a></li>
-        <li><a href="#experiencia" class="text-white/85 no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Experiencia</a></li>
-        <li><a href="#galeria" class="text-white/85 no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Galería</a></li>
-        <li><a href="#contacto" class="bg-[#F2B800] text-[#2D3137] font-bold rounded-lg px-4 py-2 transition-transform hover:-translate-y-px hover:bg-[#e0aa00]">Cotizar</a></li>
+      <ul class="hidden md:flex items-center gap-1.5 lg:gap-2 list-none" id="navLinks">
+        <li><a href="#inicio" class="block w-full md:w-auto text-white/85 no-underline text-base md:text-sm font-medium px-4 md:px-3.5 py-3 md:py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Inicio</a></li>
+        <li><a href="#nosotros" class="block w-full md:w-auto text-white/85 no-underline text-base md:text-sm font-medium px-4 md:px-3.5 py-3 md:py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Nosotros</a></li>
+        <li><a href="#servicios" class="block w-full md:w-auto text-white/85 no-underline text-base md:text-sm font-medium px-4 md:px-3.5 py-3 md:py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Soluciones</a></li>
+        <li><a href="#experiencia" class="block w-full md:w-auto text-white/85 no-underline text-base md:text-sm font-medium px-4 md:px-3.5 py-3 md:py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Experiencia</a></li>
+        <li><a href="#galeria" class="block w-full md:w-auto text-white/85 no-underline text-base md:text-sm font-medium px-4 md:px-3.5 py-3 md:py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Galería</a></li>
+        <li><a href="#contacto" class="block text-center w-full md:w-auto bg-[#F2B800] text-[#2D3137] font-bold rounded-lg px-4 py-3 md:py-2 transition-transform hover:-translate-y-px hover:bg-[#e0aa00] text-base md:text-sm mt-1 md:mt-0">Cotizar</a></li>
       </ul>
-      <button class="md:hidden flex flex-col gap-1 bg-transparent border-none cursor-pointer p-1" id="hamburger" aria-label="Abrir menú">
+      <button class="md:hidden flex flex-col justify-center items-center gap-1.5 bg-transparent border-none cursor-pointer p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/40" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
         <span class="block w-6 h-0.5 bg-white rounded-full"></span>
         <span class="block w-6 h-0.5 bg-white rounded-full"></span>
         <span class="block w-6 h-0.5 bg-white rounded-full"></span>
@@ -26,34 +26,35 @@ import Layout from '../layouts/Layout.astro';
   </nav>
 
   <!-- HERO -->
-  <section class="min-h-screen bg-gradient-to-br from-[#063350] via-[#0A4B75] to-[#1a7ab5] flex items-center justify-center relative overflow-hidden pt-[100px] px-6 pb-[60px]" id="inicio">
+  <section class="min-h-screen bg-gradient-to-br from-[#063350] via-[#0A4B75] to-[#1a7ab5] flex flex-col items-center justify-center relative overflow-hidden pt-[110px] px-4 sm:px-6 pb-[70px] scroll-mt-20" id="inicio">
     <div class="absolute inset-0 bg-[url('/images/hero-bg.png')] bg-center bg-cover bg-no-repeat opacity-12"></div>
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(0,163,224,0.15)_0%,transparent_60%)]"></div>
     <div class="absolute inset-0 bg-gradient-to-r from-[#063350]/70 to-transparent"></div>
     
-    <div class="relative z-10 text-center max-w-[780px] mx-auto">
-      <div class="flex flex-wrap gap-2.5 justify-center mb-8">
-        <span class="bg-white/10 border border-white/25 text-white text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm tracking-wide">PMI</span>
-        <span class="bg-white/10 border border-white/25 text-white text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm tracking-wide">ISO 9001</span>
-        <span class="bg-white/10 border border-white/25 text-white text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm tracking-wide">AWS D1.1-D1.7</span>
-        <span class="bg-white/10 border border-white/25 text-white text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm tracking-wide">IACS</span>
+    <div class="relative z-10 text-center max-w-[820px] mx-auto w-full my-auto">
+      <div class="flex flex-wrap gap-2 sm:gap-2.5 justify-center mb-6 sm:mb-8">
+        <span class="bg-white/10 border border-white/25 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-sm tracking-wide">PMI</span>
+        <span class="bg-white/10 border border-white/25 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-sm tracking-wide">ISO 9001</span>
+        <span class="bg-white/10 border border-white/25 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-sm tracking-wide">AWS D1.1-D1.7</span>
+        <span class="bg-white/10 border border-white/25 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-sm tracking-wide">IACS</span>
       </div>
-      <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold text-white mb-5 leading-tight">
+      <h1 class="text-[clamp(2.1rem,6vw,4.2rem)] font-extrabold text-white mb-4 sm:mb-5 leading-tight">
         Soluciones Integrales<br/>
         <span class="bg-gradient-to-r from-[#00A3E0] to-[#F2B800] bg-clip-text text-transparent">de Ingeniería</span>
       </h1>
-      <p class="text-[clamp(1rem,2.5vw,1.2rem)] text-white/80 mb-10 leading-relaxed">
-        Aliados estratégicos para proyectos de ingeniería naval, industrial y civil.<br/>
+      <p class="text-[clamp(0.98rem,2.2vw,1.2rem)] text-white/80 mb-8 sm:mb-10 leading-relaxed max-w-[620px] mx-auto">
+        Aliados estratégicos para proyectos de ingeniería naval, industrial y civil.<br class="hidden sm:block"/>
         Calidad, precisión y entrega de valor en cada operación.
       </p>
-      <div class="flex gap-4 justify-center flex-wrap">
-        <a href="#servicios" class="inline-flex items-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-[#F2B800] text-[#2D3137] hover:bg-[#e0aa00] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(242,184,0,0.35)]">Ver Servicios</a>
-        <a href="#contacto" class="inline-flex items-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-transparent text-white border-2 border-white/40 hover:bg-white/10 hover:border-white hover:-translate-y-0.5">Solicitar Cotización</a>
+      <div class="flex flex-col sm:flex-row gap-3.5 justify-center items-center max-w-sm sm:max-w-none mx-auto">
+        <a href="#servicios" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-[#F2B800] text-[#2D3137] hover:bg-[#e0aa00] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(242,184,0,0.35)]">Ver Soluciones</a>
+        <a href="#contacto" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-transparent text-white border-2 border-white/40 hover:bg-white/10 hover:border-white hover:-translate-y-0.5">Solicitar Cotización</a>
       </div>
     </div>
-    <div class="hero-scroll-indicator">
-      <div class="scroll-dot"></div>
-    </div>
+    
+    <a href="#nosotros" class="hero-scroll-indicator absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center opacity-70 hover:opacity-100 transition-opacity cursor-pointer group" aria-label="Desplazarse a Quienes Somos">
+      <div class="scroll-dot group-hover:border-white transition-colors"></div>
+    </a>
   </section>
 
   <!-- TICKER -->
@@ -83,19 +84,19 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
   <!-- QUIÉNES SOMOS -->
-  <section class="py-[100px] bg-[#F8FAFC]" id="nosotros">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
+  <section class="py-16 sm:py-24 bg-[#F8FAFC] scroll-mt-20" id="nosotros">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
         <div>
           <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Quienes Somos</div>
-          <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Expertos que <span class="text-[#00A3E0]">generan confianza</span></h2>
-          <p class="text-[1.05rem] text-[#64748b] leading-relaxed mb-8">
+          <h2 class="text-[clamp(1.9rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Expertos que <span class="text-[#00A3E0]">generan confianza</span></h2>
+          <p class="text-[1.02rem] text-[#64748b] leading-relaxed mb-6 sm:mb-8">
             Somos una empresa que proporciona soluciones en el área metalmecánica, mantenimiento a equipos rotativos, sistemas de aire acondicionado y adecuaciones locativas. Contamos con un equipo altamente competitivo, con gran experiencia en la industria para la gestión de procesos y proyectos, generando confianza y entrega de valor en cada operación.
           </p>
         </div>
         <div class="relative rounded-2xl overflow-hidden shadow-[0_8px_48px_rgba(10,75,117,0.18)] group">
-          <img src="/images/quienes-somos-new.jpg" alt="Equipo ReNaval" class="w-full block transition-transform duration-300 group-hover:scale-105" />
-          <div class="absolute top-5 right-5 bg-[#F2B800] text-[#2D3137] font-bold text-[0.85rem] px-4 py-2 rounded-lg shadow-lg">
+          <img src="/images/quienes-somos-new.jpg" alt="Equipo ReNaval" class="w-full h-auto block transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+          <div class="absolute top-4 right-4 sm:top-5 sm:right-5 bg-[#F2B800] text-[#2D3137] font-bold text-[0.8rem] sm:text-[0.85rem] px-3.5 sm:px-4 py-2 rounded-lg shadow-lg">
             +10 años de experiencia
           </div>
         </div>
@@ -104,23 +105,23 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- MISIÓN, VISIÓN Y VALORES -->
-  <section class="bg-gradient-to-br from-[#063350] to-[#0A4B75] py-20">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
-        <div class="reveal-elem bg-white/5 border border-white/10 rounded-2xl p-10 md:p-12 backdrop-blur-md transition-all hover:bg-white/10 hover:-translate-y-1 border-t-4 border-t-[#00A3E0]">
-          <div class="text-[2.5rem] mb-5">🚀</div>
-          <h3 class="text-2xl font-extrabold text-white mb-4">Misión</h3>
-          <p class="text-white/75 leading-relaxed m-0 text-justify">Ser un aliado estratégico de nuestros clientes a través de brindarles soluciones que estén alineadas con sus objetivos y generar una entrega de valor en cada operación, procesos y proyectos.</p>
+  <section class="bg-gradient-to-br from-[#063350] to-[#0A4B75] py-16 sm:py-20">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="reveal-elem bg-white/5 border border-white/10 rounded-2xl p-7 sm:p-10 backdrop-blur-md transition-all hover:bg-white/10 hover:-translate-y-1 border-t-4 border-t-[#00A3E0]">
+          <div class="text-[2.2rem] sm:text-[2.5rem] mb-4">🚀</div>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-3 sm:mb-4">Misión</h3>
+          <p class="text-white/75 leading-relaxed m-0 text-sm sm:text-base text-justify">Ser un aliado estratégico de nuestros clientes a través de brindarles soluciones que estén alineadas con sus objetivos y generar una entrega de valor en cada operación, procesos y proyectos.</p>
         </div>
-        <div class="reveal-elem bg-white/5 border border-white/10 rounded-2xl p-10 md:p-12 backdrop-blur-md transition-all hover:bg-white/10 hover:-translate-y-1 border-t-4 border-t-[#F2B800]" style="transition-delay: 150ms">
-          <div class="text-[2.5rem] mb-5">🌐</div>
-          <h3 class="text-2xl font-extrabold text-white mb-4">Visión</h3>
-          <p class="text-white/75 leading-relaxed m-0 text-justify">ReNaval será líder en soluciones para la industria marítima y metalúrgica en construcción o mantenimiento, optimizando los recursos de nuestros clientes y juntos seguir creciendo.</p>
+        <div class="reveal-elem bg-white/5 border border-white/10 rounded-2xl p-7 sm:p-10 backdrop-blur-md transition-all hover:bg-white/10 hover:-translate-y-1 border-t-4 border-t-[#F2B800]" style="transition-delay: 150ms">
+          <div class="text-[2.2rem] sm:text-[2.5rem] mb-4">🌐</div>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-3 sm:mb-4">Visión</h3>
+          <p class="text-white/75 leading-relaxed m-0 text-sm sm:text-base text-justify">ReNaval será líder en soluciones para la industria marítima y metalúrgica en construcción o mantenimiento, optimizando los recursos de nuestros clientes y juntos seguir creciendo.</p>
         </div>
-        <div class="reveal-elem bg-white/5 border border-white/10 rounded-2xl p-10 md:p-12 backdrop-blur-md transition-all hover:bg-white/10 hover:-translate-y-1 border-t-4 border-t-[#25D366]" style="transition-delay: 300ms">
-          <div class="text-[2.5rem] mb-5">💎</div>
-          <h3 class="text-2xl font-extrabold text-white mb-4">Valores</h3>
-          <p class="text-white/75 leading-relaxed m-0 text-justify">
+        <div class="reveal-elem bg-white/5 border border-white/10 rounded-2xl p-7 sm:p-10 backdrop-blur-md transition-all hover:bg-white/10 hover:-translate-y-1 border-t-4 border-t-[#25D366] md:col-span-2 lg:col-span-1" style="transition-delay: 300ms">
+          <div class="text-[2.2rem] sm:text-[2.5rem] mb-4">💎</div>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-3 sm:mb-4">Valores</h3>
+          <p class="text-white/75 leading-relaxed m-0 text-sm sm:text-base text-justify">
             <strong class="text-white">Pasión e Integridad.</strong><br/><br/>
             En ReNaval estamos comprometidos con el mejoramiento continuo y el ganar-ganar: si nuestros clientes crecen, nosotros crecemos, y si nosotros crecemos, nuestros clientes crecen, tomando como pilares estos dos valores.
           </p>
@@ -130,15 +131,16 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- SERVICIOS -->
-  <section class="py-[100px] bg-[#F8FAFC]" id="servicios">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Nuestras <span class="text-[#00A3E0]">Soluciones</span></h2>
-        <p class="text-[1.05rem] text-[#64748b] max-w-[560px] mx-auto">Capacidad técnica integral para proyectos industriales, navales y civiles de alta complejidad.</p>
+  <section class="py-16 sm:py-24 bg-[#F8FAFC] scroll-mt-20" id="servicios">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Servicios</div>
+        <h2 class="text-[clamp(1.9rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Nuestras <span class="text-[#00A3E0]">Soluciones</span></h2>
+        <p class="text-[1.02rem] text-[#64748b] max-w-[560px] mx-auto">Capacidad técnica integral para proyectos industriales, navales y civiles de alta complejidad.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group">
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group">
           <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
           <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">01</div>
           <div class="text-4xl mb-4 block">📋</div>
@@ -150,7 +152,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 100ms">
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 50ms">
           <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
           <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">02</div>
           <div class="text-4xl mb-4 block">🔩</div>
@@ -162,7 +164,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 200ms">
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 100ms">
           <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
           <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">03</div>
           <div class="text-4xl mb-4 block">🏗️</div>
@@ -174,7 +176,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 300ms">
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 150ms">
           <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
           <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">04</div>
           <div class="text-4xl mb-4 block">🔧</div>
@@ -184,20 +186,70 @@ import Layout from '../layouts/Layout.astro';
             <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Ultrasonido</span>
           </div>
         </div>
+
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 200ms">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+          <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">05</div>
+          <div class="text-4xl mb-4 block">⚙️</div>
+          <h3 class="text-base font-bold text-[#2D3137] mb-3 leading-snug">Mantenimiento Equipos Rotativos</h3>
+          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Alineación y balanceo dinámico para mantener equipos correctamente equilibrados, prolongando la vida útil y reduciendo tiempos improductivos.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Alineación</span>
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Balanceo</span>
+          </div>
+        </div>
+
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 250ms">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+          <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">06</div>
+          <div class="text-4xl mb-4 block">❄️</div>
+          <h3 class="text-base font-bold text-[#2D3137] mb-3 leading-snug">Montajes y Mantenimiento HVAC</h3>
+          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Instalación y mantenimiento preventivo y correctivo de sistemas de aire acondicionado residencial, comercial e industrial.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">HVAC</span>
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Climatización</span>
+          </div>
+        </div>
+
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 300ms">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+          <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">07</div>
+          <div class="text-4xl mb-4 block">🎨</div>
+          <h3 class="text-base font-bold text-[#2D3137] mb-3 leading-snug">Pintura y Sandblasting</h3>
+          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Limpieza de superficies metálicas mediante chorro abrasivo y aplicación de recubrimientos anticorrosivos bajo estándares internacionales.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Sandblasting</span>
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Pintura</span>
+          </div>
+        </div>
+
+        <div class="reveal-elem bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all hover:-translate-y-1.5 hover:shadow-[0_8px_48px_rgba(10,75,117,0.18)] hover:border-transparent group" style="transition-delay: 350ms">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00A3E0] to-[#0A4B75] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></div>
+          <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">08</div>
+          <div class="text-4xl mb-4 block">🏛️</div>
+          <h3 class="text-base font-bold text-[#2D3137] mb-3 leading-snug">Ingeniería Civil</h3>
+          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Construcciones y adecuación de espacios, obras civiles, acabados de alta calidad y mantenimiento de infraestructura edilicia.</p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Civil</span>
+            <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Adecuaciones</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCIA -->
-  <section class="py-[100px]" id="experiencia">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
+  <section class="py-16 sm:py-24 scroll-mt-20" id="experiencia">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
         <div class="order-2 md:order-1 relative rounded-2xl overflow-hidden shadow-[0_8px_48px_rgba(10,75,117,0.18)] group">
-          <img src="/images/experiencia-socios.jpg" alt="Experiencia de los socios" class="w-full block transition-transform duration-300 group-hover:scale-105" />
+          <img src="/images/experiencia-socios.jpg" alt="Experiencia de los socios ReNaval" class="w-full h-auto block transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </div>
         <div class="order-1 md:order-2">
-          <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Experiencia de <span class="text-[#00A3E0]">los Socios</span></h2>
-          <p class="text-[1.05rem] text-[#64748b] leading-relaxed mb-8">
+          <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Trayectoria</div>
+          <h2 class="text-[clamp(1.9rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Experiencia de <span class="text-[#00A3E0]">los Socios</span></h2>
+          <p class="text-[1.02rem] text-[#64748b] leading-relaxed mb-6 sm:mb-8">
             Cada uno de los miembros del equipo cuenta con más de 10 años de experiencia en la industria desde la operación y gerencia, desarrollando proyectos bajo normas según sea exigido por el cliente en la industria naval o metalúrgica, aplicando metodologías como LEAN, SMED, TPM, KAIZEN, entre otras, para la optimización de los procesos.
           </p>
           <div class="flex flex-wrap gap-2">
@@ -216,31 +268,50 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- GALERÍA DE TRABAJOS -->
-  <section class="py-[100px] bg-[#F8FAFC]" id="galeria">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <div class="text-center mb-16">
+  <section class="py-16 sm:py-24 bg-[#F8FAFC] scroll-mt-20" id="galeria">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 sm:mb-14">
         <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Galería</div>
-        <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Trabajos <span class="text-[#00A3E0]">Realizados</span></h2>
-        <p class="text-[1.05rem] text-[#64748b] max-w-[560px] mx-auto">Una muestra de nuestra capacidad técnica en proyectos navales, metalúrgicos y de mantenimiento industrial.</p>
+        <h2 class="text-[clamp(1.9rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Trabajos <span class="text-[#00A3E0]">Realizados</span></h2>
+        <p class="text-[1.02rem] text-[#64748b] max-w-[560px] mx-auto">Una muestra de nuestra capacidad técnica en proyectos navales, metalúrgicos y de mantenimiento industrial. Selecciona o amplía cualquier fotografía.</p>
       </div>
 
       <!-- CARRUSEL -->
-      <div class="relative" id="gallery-carousel">
+      <div class="relative max-w-4xl mx-auto" id="gallery-carousel">
 
         <!-- Slide principal -->
-        <div class="relative overflow-hidden rounded-2xl shadow-[0_12px_48px_rgba(10,75,117,0.18)] bg-[#1a2332] cursor-zoom-in"
-             id="carousel-main" style="height:clamp(300px,55vw,600px);">
+        <div class="relative overflow-hidden rounded-2xl shadow-[0_12px_48px_rgba(10,75,117,0.18)] bg-[#1a2332] cursor-zoom-in h-[260px] xs:h-[320px] sm:h-[420px] md:h-[500px]"
+             id="carousel-main">
           <img id="carousel-img" src="/images/PHOTO-2026-09-25-07-15-52.jpg" alt="Soldadura en casco de embarcación"
                class="w-full h-full object-cover" style="transition:opacity .22s ease;" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none"></div>
+          
+          <!-- Flecha izquierda -->
+          <button id="prev-btn" type="button"
+                  class="absolute left-2.5 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-[#0A4B75] w-10 h-10 sm:w-11 sm:h-11 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-105 border border-white/50 focus:outline-none"
+                  aria-label="Foto anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+
+          <!-- Flecha derecha -->
+          <button id="next-btn" type="button"
+                  class="absolute right-2.5 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-[#0A4B75] w-10 h-10 sm:w-11 sm:h-11 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-105 border border-white/50 focus:outline-none"
+                  aria-label="Foto siguiente">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+
+          <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 flex items-end justify-between gap-3">
             <div>
-              <p id="carousel-caption" class="text-white font-bold text-lg leading-tight drop-shadow">Soldadura Naval</p>
-              <p id="carousel-sub" class="text-white/70 text-sm mt-0.5">Foto 1 de 12</p>
+              <p id="carousel-caption" class="text-white font-bold text-base sm:text-lg leading-tight drop-shadow">Soldadura Naval</p>
+              <p id="carousel-sub" class="text-white/70 text-xs sm:text-sm mt-0.5">Foto 1 de 12</p>
             </div>
-            <button id="carousel-zoom-btn"
-                    class="bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2.5 rounded-lg transition-all border border-white/20"
-                    aria-label="Ver en zoom">
+            <button id="carousel-zoom-btn" type="button"
+                    class="bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2.5 rounded-lg transition-all border border-white/20 flex-shrink-0"
+                    aria-label="Ver foto en tamaño completo (Zoom)">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 17A6 6 0 1 0 11 5a6 6 0 0 0 0 12zm-3-6h6m-3-3v6"/>
               </svg>
@@ -248,32 +319,12 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Flecha izquierda -->
-        <button id="prev-btn"
-                class="absolute left-3 z-10 bg-white/90 hover:bg-white text-[#0A4B75] w-11 h-11 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 border border-white/50"
-                style="top:calc(clamp(300px,55vw,600px)/2 - 22px);"
-                aria-label="Foto anterior">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
-          </svg>
-        </button>
-
-        <!-- Flecha derecha -->
-        <button id="next-btn"
-                class="absolute right-3 z-10 bg-white/90 hover:bg-white text-[#0A4B75] w-11 h-11 rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 border border-white/50"
-                style="top:calc(clamp(300px,55vw,600px)/2 - 22px);"
-                aria-label="Foto siguiente">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-          </svg>
-        </button>
-
         <!-- Miniaturas -->
-        <div class="mt-4 flex gap-3 overflow-x-auto pb-2" id="carousel-thumbs"
-             style="scrollbar-width:thin;scrollbar-color:#00A3E0 #e2e8f0;"></div>
+        <div class="mt-4 flex gap-2.5 sm:gap-3 overflow-x-auto pb-2 relative scroll-smooth" id="carousel-thumbs"
+             style="scrollbar-width:thin;scrollbar-color:#00A3E0 #e2e8f0;-webkit-overflow-scrolling:touch;"></div>
 
         <!-- Puntos indicadores -->
-        <div class="flex justify-center gap-2 mt-5" id="carousel-dots"></div>
+        <div class="flex justify-center gap-2 mt-4" id="carousel-dots"></div>
 
       </div><!-- /gallery-carousel -->
     </div>
@@ -281,34 +332,34 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- LIGHTBOX ZOOM -->
   <div id="lightbox" role="dialog" aria-modal="true" aria-label="Zoom de imagen"
-       class="fixed inset-0 z-[9999] flex items-center justify-center p-4"
-       style="background:rgba(0,0,0,0.93);opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(8px);">
+       class="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-6"
+       style="background:rgba(0,0,0,0.94);opacity:0;pointer-events:none;transition:opacity .25s ease;backdrop-filter:blur(8px);">
 
-    <button id="lb-close"
-            class="absolute top-4 right-4 text-white/70 hover:text-white bg-white/10 hover:bg-white/25 w-11 h-11 rounded-full flex items-center justify-center text-2xl transition-all z-10"
+    <button id="lb-close" type="button"
+            class="absolute top-4 right-4 text-white/80 hover:text-white bg-white/10 hover:bg-white/25 w-11 h-11 rounded-full flex items-center justify-center text-2xl transition-all z-20 cursor-pointer"
             aria-label="Cerrar">&#x2715;</button>
 
-    <button id="lb-prev"
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all z-10"
+    <button id="lb-prev" type="button"
+            class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/30 text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all z-20 cursor-pointer"
             aria-label="Anterior">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
       </svg>
     </button>
 
     <div class="flex flex-col items-center gap-3 max-w-5xl w-full">
-      <img id="lb-img" src="" alt="" class="max-h-[80vh] max-w-full rounded-xl shadow-2xl object-contain select-none"
-           style="transition:opacity .2s ease;" />
+      <img id="lb-img" src="" alt="" class="max-h-[78vh] max-w-full rounded-xl shadow-2xl object-contain select-none"
+           style="transition:opacity .18s ease;" />
       <div class="flex items-center gap-3">
-        <p id="lb-caption" class="text-white/85 text-sm font-semibold text-center"></p>
-        <span id="lb-counter" class="text-white/45 text-xs whitespace-nowrap"></span>
+        <p id="lb-caption" class="text-white/90 text-sm sm:text-base font-semibold text-center"></p>
+        <span id="lb-counter" class="text-white/50 text-xs sm:text-sm whitespace-nowrap"></span>
       </div>
     </div>
 
-    <button id="lb-next"
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all z-10"
+    <button id="lb-next" type="button"
+            class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/15 hover:bg-white/30 text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all z-20 cursor-pointer"
             aria-label="Siguiente">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
       </svg>
     </button>
@@ -317,23 +368,22 @@ import Layout from '../layouts/Layout.astro';
   <script>
     (function () {
       const GALLERY = [
-        { src: '/images/PHOTO-2026-09-25-07-15-52.jpg',   label: 'Soldadura Naval',           desc: 'Soldadura en casco de embarcaci\u00f3n' },
-        { src: '/images/PHOTO-2026-09-25-07-15-52 2.jpg', label: 'Estructuras Met\u00e1licas',     desc: 'Fabricaci\u00f3n de estructura met\u00e1lica en interior' },
-        { src: '/images/PHOTO-2026-09-25-07-16-05 2.jpg', label: 'Mantenimiento de Equipos',  desc: 'T\u00e9cnico ReNaval en sala de m\u00e1quinas' },
+        { src: '/images/PHOTO-2026-09-25-07-15-52.jpg',   label: 'Soldadura Naval',           desc: 'Soldadura en casco de embarcación' },
+        { src: '/images/PHOTO-2026-09-25-07-15-52 2.jpg', label: 'Estructuras Metálicas',     desc: 'Fabricación de estructura metálica en interior' },
+        { src: '/images/PHOTO-2026-09-25-07-16-05 2.jpg', label: 'Mantenimiento de Equipos',  desc: 'Técnico ReNaval en sala de máquinas' },
         { src: '/images/PHOTO-2026-09-25-07-16-02.jpg',   label: 'Operaciones en Cubierta',   desc: 'Soldador ReNaval trabajando en cubierta' },
-        { src: '/images/PHOTO-2026-09-25-07-15-56 2.jpg', label: 'Fabricaci\u00f3n Naval',         desc: 'Estructura naval fabricada y pintada' },
-        { src: '/images/PHOTO-2026-09-25-07-16-05 4.jpg', label: 'Mantenimiento de V\u00e1lvulas', desc: 'V\u00e1lvulas industriales restauradas' },
-        { src: '/images/PHOTO-2026-09-25-07-15-55.jpg',   label: 'Reparaci\u00f3n de Cascos',      desc: 'Reparaci\u00f3n de casco en astillero' },
-        { src: '/images/PHOTO-2026-09-25-07-16-01.jpg',   label: 'Tuber\u00edas Industriales',     desc: 'Tuber\u00edas en acero inoxidable fabricadas' },
-        { src: '/images/PHOTO-2026-09-25-07-16-05.jpg',   label: 'Overhaul de V\u00e1lvulas',      desc: 'V\u00e1lvula restaurada y pintada' },
-        { src: '/images/PHOTO-2026-09-25-07-15-56.jpg',   label: 'Pintura Anticorrosiva',     desc: 'Pintura anticorrosiva en casco de embarcaci\u00f3n' },
+        { src: '/images/PHOTO-2026-09-25-07-15-56 2.jpg', label: 'Fabricación Naval',         desc: 'Estructura naval fabricada y pintada' },
+        { src: '/images/PHOTO-2026-09-25-07-16-05 4.jpg', label: 'Mantenimiento de Válvulas', desc: 'Válvulas industriales restauradas' },
+        { src: '/images/PHOTO-2026-09-25-07-15-55.jpg',   label: 'Reparación de Cascos',      desc: 'Reparación de casco en astillero' },
+        { src: '/images/PHOTO-2026-09-25-07-16-01.jpg',   label: 'Tuberías Industriales',     desc: 'Tuberías en acero inoxidable fabricadas' },
+        { src: '/images/PHOTO-2026-09-25-07-16-05.jpg',   label: 'Overhaul de Válvulas',      desc: 'Válvula restaurada y pintada' },
+        { src: '/images/PHOTO-2026-09-25-07-15-56.jpg',   label: 'Pintura Anticorrosiva',     desc: 'Pintura anticorrosiva en casco de embarcación' },
         { src: '/images/PHOTO-2026-09-25-07-16-04.jpg',   label: 'Trabajos en Muelle',        desc: 'Trabajo en muelle - soldadura y reparaciones' },
-        { src: '/images/PHOTO-2026-09-25-07-16-04 4.jpg', label: 'Fabricaci\u00f3n en Aluminio',   desc: 'Escalera en aluminio para embarcaci\u00f3n' },
+        { src: '/images/PHOTO-2026-09-25-07-16-04 4.jpg', label: 'Fabricación en Aluminio',   desc: 'Escalera en aluminio para embarcación' },
       ];
 
       let idx = 0;
       let lbOpen = false;
-      let autoTimer = null;
 
       const cImg   = document.getElementById('carousel-img');
       const cCap   = document.getElementById('carousel-caption');
@@ -345,21 +395,25 @@ import Layout from '../layouts/Layout.astro';
       const lbCap  = document.getElementById('lb-caption');
       const lbCnt  = document.getElementById('lb-counter');
 
-      // Construir miniaturas y dots
+      if (!cImg || !thumbs || !dots) return;
+
+      // Construir miniaturas y dots con botones accesibles
       GALLERY.forEach(function(item, i) {
         var th = document.createElement('button');
-        th.className = 'flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all focus:outline-none ' +
+        th.type = 'button';
+        th.className = 'flex-shrink-0 w-16 h-12 sm:w-20 sm:h-16 rounded-lg overflow-hidden border-2 transition-all cursor-pointer focus:outline-none ' +
                        (i === 0 ? 'border-[#00A3E0] opacity-100 scale-105' : 'border-transparent opacity-55 hover:opacity-85');
         th.setAttribute('aria-label', item.label);
-        th.innerHTML = '<img src="' + item.src + '" alt="' + item.label + '" class="w-full h-full object-cover" loading="lazy"/>';
-        th.addEventListener('click', function() { goTo(i); });
+        th.innerHTML = '<img src="' + item.src + '" alt="' + item.label + '" class="w-full h-full object-cover pointer-events-none" loading="lazy"/>';
+        th.addEventListener('click', function(e) { e.preventDefault(); goTo(i); });
         thumbs.appendChild(th);
 
         var d = document.createElement('button');
+        d.type = 'button';
         d.className = 'rounded-full border-none cursor-pointer focus:outline-none transition-all';
         d.style.cssText = 'height:8px;background:' + (i === 0 ? '#00A3E0' : '#cbd5e1') + ';width:' + (i === 0 ? '24' : '8') + 'px;';
         d.setAttribute('aria-label', 'Foto ' + (i + 1));
-        d.addEventListener('click', function() { goTo(i); });
+        d.addEventListener('click', function(e) { e.preventDefault(); goTo(i); });
         dots.appendChild(d);
       });
 
@@ -368,14 +422,25 @@ import Layout from '../layouts/Layout.astro';
         var item = GALLERY[idx];
 
         cImg.style.opacity = '0';
-        setTimeout(function() { cImg.src = item.src; cImg.alt = item.desc; cImg.style.opacity = '1'; }, 180);
+        setTimeout(function() { 
+          cImg.src = item.src; 
+          cImg.alt = item.desc; 
+          cImg.style.opacity = '1'; 
+        }, 150);
         cCap.textContent = item.label;
         cSub.textContent = 'Foto ' + (idx + 1) + ' de ' + GALLERY.length;
 
-        thumbs.querySelectorAll('button').forEach(function(t, i) {
-          t.className = 'flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all focus:outline-none ' +
+        var allThumbs = thumbs.querySelectorAll('button');
+        allThumbs.forEach(function(t, i) {
+          t.className = 'flex-shrink-0 w-16 h-12 sm:w-20 sm:h-16 rounded-lg overflow-hidden border-2 transition-all cursor-pointer focus:outline-none ' +
                         (i === idx ? 'border-[#00A3E0] opacity-100 scale-105' : 'border-transparent opacity-55 hover:opacity-85');
-          if (i === idx) t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          if (i === idx) {
+            // Desplazar estrictamente el contenedor horizontal de miniaturas (sin mover el scroll de la página)
+            var tLeft = t.offsetLeft;
+            var tWidth = t.offsetWidth;
+            var cWidth = thumbs.offsetWidth;
+            thumbs.scrollTo({ left: tLeft - (cWidth / 2) + (tWidth / 2), behavior: 'smooth' });
+          }
         });
 
         dots.querySelectorAll('button').forEach(function(d, i) {
@@ -389,7 +454,11 @@ import Layout from '../layouts/Layout.astro';
       function syncLb() {
         var item = GALLERY[idx];
         lbImg.style.opacity = '0';
-        setTimeout(function() { lbImg.src = item.src; lbImg.alt = item.desc; lbImg.style.opacity = '1'; }, 150);
+        setTimeout(function() { 
+          lbImg.src = item.src; 
+          lbImg.alt = item.desc; 
+          lbImg.style.opacity = '1'; 
+        }, 120);
         lbCap.textContent = item.label;
         lbCnt.textContent = (idx + 1) + ' / ' + GALLERY.length;
       }
@@ -400,7 +469,6 @@ import Layout from '../layouts/Layout.astro';
         lb.style.pointerEvents = 'all';
         document.body.style.overflow = 'hidden';
         lbOpen = true;
-        stopAuto();
       }
 
       function closeLb() {
@@ -408,29 +476,28 @@ import Layout from '../layouts/Layout.astro';
         lb.style.pointerEvents = 'none';
         document.body.style.overflow = '';
         lbOpen = false;
-        startAuto();
       }
 
-      function startAuto() { autoTimer = setInterval(function() { goTo(idx + 1); }, 5000); }
-      function stopAuto()  { clearInterval(autoTimer); }
-
-      // Controles carrusel
-      document.getElementById('prev-btn').addEventListener('click', function() { goTo(idx - 1); });
-      document.getElementById('next-btn').addEventListener('click', function() { goTo(idx + 1); });
+      // Controles manuales del carrusel (100% control del usuario, sin temporizadores automáticos)
+      document.getElementById('prev-btn').addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); goTo(idx - 1); });
+      document.getElementById('next-btn').addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); goTo(idx + 1); });
       document.getElementById('carousel-main').addEventListener('click', openLb);
-      document.getElementById('carousel-zoom-btn').addEventListener('click', function(e) { e.stopPropagation(); openLb(); });
+      document.getElementById('carousel-zoom-btn').addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); openLb(); });
 
-      var wrap = document.getElementById('gallery-carousel');
-      wrap.addEventListener('mouseenter', stopAuto);
-      wrap.addEventListener('mouseleave', function() { if (!lbOpen) startAuto(); });
-      startAuto();
-
-      // Swipe carrusel
+      // Swipe táctil en móvil para carrusel
       var tsx = 0;
+      var tsy = 0;
       var cs = document.getElementById('carousel-main');
-      cs.addEventListener('touchstart', function(e) { tsx = e.touches[0].clientX; }, { passive: true });
+      cs.addEventListener('touchstart', function(e) { 
+        tsx = e.touches[0].clientX; 
+        tsy = e.touches[0].clientY;
+      }, { passive: true });
       cs.addEventListener('touchend', function(e) {
-        if (Math.abs(tsx - e.changedTouches[0].clientX) > 40) goTo(tsx > e.changedTouches[0].clientX ? idx + 1 : idx - 1);
+        var dx = tsx - e.changedTouches[0].clientX;
+        var dy = tsy - e.changedTouches[0].clientY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+          goTo(dx > 0 ? idx + 1 : idx - 1);
+        }
       }, { passive: true });
 
       // Controles lightbox
@@ -446,52 +513,59 @@ import Layout from '../layouts/Layout.astro';
         if (e.key === 'ArrowRight') goTo(idx + 1);
       });
 
-      // Swipe lightbox
+      // Swipe táctil en lightbox
       var lbx = 0;
-      lb.addEventListener('touchstart', function(e) { lbx = e.touches[0].clientX; }, { passive: true });
+      var lby = 0;
+      lb.addEventListener('touchstart', function(e) { 
+        lbx = e.touches[0].clientX; 
+        lby = e.touches[0].clientY;
+      }, { passive: true });
       lb.addEventListener('touchend', function(e) {
-        if (Math.abs(lbx - e.changedTouches[0].clientX) > 40) goTo(lbx > e.changedTouches[0].clientX ? idx + 1 : idx - 1);
+        var dx = lbx - e.changedTouches[0].clientX;
+        var dy = lby - e.changedTouches[0].clientY;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+          goTo(dx > 0 ? idx + 1 : idx - 1);
+        }
       }, { passive: true });
     })();
   </script>
 
 
   <!-- CONTACTO -->
-
-  <section class="py-[100px] bg-[#F8FAFC]" id="contacto">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <div class="text-center mb-16">
+  <section class="py-16 sm:py-24 bg-[#F8FAFC] scroll-mt-20" id="contacto">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 sm:mb-16">
         <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Contáctenos</div>
-        <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Solicite su <span class="text-[#00A3E0]">Cotización</span></h2>
-        <p class="text-[1.05rem] text-[#64748b] max-w-[560px] mx-auto">Cuéntenos su proyecto y un especialista de ReNaval se pondrá en contacto a la brevedad.</p>
+        <h2 class="text-[clamp(1.9rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">Solicite su <span class="text-[#00A3E0]">Cotización</span></h2>
+        <p class="text-[1.02rem] text-[#64748b] max-w-[560px] mx-auto">Cuéntenos su proyecto y un especialista de ReNaval se pondrá en contacto a la brevedad.</p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-        <div class="lg:col-span-2 bg-white border border-[#e2e8f0] rounded-2xl p-8 shadow-[0_8px_32px_rgba(10,75,117,0.06)]">
-          <form id="contactForm" class="flex flex-col gap-5">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10">
+        <div class="lg:col-span-2 bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 shadow-[0_8px_32px_rgba(10,75,117,0.06)]">
+          <form id="contactForm" class="flex flex-col gap-4 sm:gap-5">
             <!-- Honeypot para seguridad contra bots (SPAM) -->
             <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
             
             <div>
               <label for="nombre" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Nombre completo *</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
               <div>
                 <label for="empresa" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Empresa</label>
-                <input type="text" id="empresa" name="empresa" placeholder="Su empresa" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+                <input type="text" id="empresa" name="empresa" placeholder="Su empresa" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
               </div>
               <div>
                 <label for="telefono" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Teléfono *</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="3XX XXX XXXX" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+                <input type="tel" id="telefono" name="telefono" placeholder="3XX XXX XXXX" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
               </div>
             </div>
             <div>
               <label for="email" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Correo electrónico *</label>
-              <input type="email" id="email" name="email" placeholder="correo@empresa.com" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+              <input type="email" id="email" name="email" placeholder="correo@empresa.com" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
             </div>
             <div>
               <label for="servicio" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Servicio de interés *</label>
-              <select id="servicio" name="servicio" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors appearance-none">
+              <select id="servicio" name="servicio" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors appearance-none">
                 <option value="" disabled selected>Seleccione una solución</option>
                 <option>Asesoría para Proyectos</option>
                 <option>Diseño y Fabricación Metalmecánica</option>
@@ -505,30 +579,30 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div>
               <label for="mensaje" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Descripción del proyecto *</label>
-              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describa brevemente su proyecto o requerimiento..." required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-[0.95rem] p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors resize-y"></textarea>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describa brevemente su proyecto o requerimiento..." required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors resize-y"></textarea>
             </div>
-            <button type="submit" id="submitBtn" class="bg-[#0A4B75] text-white font-bold text-[1.05rem] p-4 rounded-lg mt-2 transition-all hover:bg-[#063350] hover:-translate-y-0.5 shadow-[0_4px_12px_rgba(10,75,117,0.2)]">Enviar Solicitud &rarr;</button>
+            <button type="submit" id="submitBtn" class="bg-[#0A4B75] text-white font-bold text-base sm:text-[1.05rem] p-4 rounded-lg mt-2 transition-all hover:bg-[#063350] hover:-translate-y-0.5 shadow-[0_4px_12px_rgba(10,75,117,0.2)]">Enviar Solicitud &rarr;</button>
             <div id="formSuccess" class="hidden bg-green-50 text-green-700 border border-green-200 p-4 rounded-lg text-sm text-center font-medium mt-2">Solicitud enviada exitosamente. Nos pondremos en contacto pronto.</div>
             <div id="formError" class="hidden bg-red-50 text-red-700 border border-red-200 p-4 rounded-lg text-sm text-center font-medium mt-2">Hubo un error al enviar la solicitud. Verifique su conexión e intente nuevamente.</div>
           </form>
         </div>
         <div class="lg:col-span-1">
-          <div class="bg-gradient-to-br from-[#063350] to-[#0A4B75] rounded-2xl p-8 text-center text-white sticky top-24">
+          <div class="bg-gradient-to-br from-[#063350] to-[#0A4B75] rounded-2xl p-6 sm:p-8 text-center text-white sticky top-24">
             <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-2 border-white/20">BB</div>
             <h3 class="text-xl font-bold mb-1">Bayron Bartelemy</h3>
-            <p class="text-[#00A3E0] text-sm font-semibold mb-8">Gerente de Proyecto</p>
-            <div class="flex flex-col gap-4 text-left">
+            <p class="text-[#00A3E0] text-sm font-semibold mb-6 sm:mb-8">Gerente de Proyecto</p>
+            <div class="flex flex-col gap-3.5 text-left">
               <a href="tel:3113356201" class="flex items-center gap-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors no-underline text-white group" rel="noopener noreferrer">
                 <span class="text-xl group-hover:scale-110 transition-transform">📞</span>
-                <div><small class="block text-white/55 text-xs">Celular 1</small><strong>311 335 6201</strong></div>
+                <div><small class="block text-white/55 text-xs">Celular 1</small><strong class="text-sm sm:text-base">311 335 6201</strong></div>
               </a>
               <a href="tel:3205419121" class="flex items-center gap-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors no-underline text-white group" rel="noopener noreferrer">
                 <span class="text-xl group-hover:scale-110 transition-transform">📱</span>
-                <div><small class="block text-white/55 text-xs">Celular 2</small><strong>320 541 9121</strong></div>
+                <div><small class="block text-white/55 text-xs">Celular 2</small><strong class="text-sm sm:text-base">320 541 9121</strong></div>
               </a>
               <a href="mailto:ingbartelemy24@gmail.com" class="flex items-center gap-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors no-underline text-white group" rel="noopener noreferrer">
                 <span class="text-xl group-hover:scale-110 transition-transform">✉️</span>
-                <div><small class="block text-white/55 text-xs">Correo</small><strong>ingbartelemy24@gmail.com</strong></div>
+                <div class="min-w-0"><small class="block text-white/55 text-xs">Correo</small><strong class="text-xs sm:text-sm break-all">ingbartelemy24@gmail.com</strong></div>
               </a>
             </div>
           </div>
@@ -538,48 +612,44 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA WHATSAPP -->
-  <section class="relative py-20 overflow-hidden">
-    <!-- Fondo degradado navy -->
+  <section class="relative py-16 sm:py-20 overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-[#0A4B75] via-[#063350] to-[#2D3137]"></div>
-    <!-- Patrón decorativo sutil -->
     <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #00A3E0 1px, transparent 1px); background-size: 32px 32px;"></div>
 
-    <div class="relative max-w-[900px] mx-auto px-6 text-center">
-      <!-- Ícono decorativo -->
-      <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#F2B800]/15 border border-[#F2B800]/30 mb-6">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#F2B800]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <div class="relative max-w-[900px] mx-auto px-4 sm:px-6 text-center">
+      <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#F2B800]/15 border border-[#F2B800]/30 mb-5 sm:mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 sm:w-7 sm:h-7 text-[#F2B800]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       </div>
 
-      <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-white leading-tight mb-4">
+      <h2 class="text-[clamp(1.6rem,4vw,2.8rem)] font-extrabold text-white leading-tight mb-4">
         Si quieres crecer, tu mejor opción<br class="hidden md:block" />
         es el <span class="text-[#F2B800]">mejoramiento continuo</span>
       </h2>
-      <p class="text-[1.1rem] text-white/70 max-w-[620px] mx-auto mb-10 leading-relaxed">
+      <p class="text-[clamp(0.98rem,2vw,1.1rem)] text-white/70 max-w-[620px] mx-auto mb-8 sm:mb-10 leading-relaxed">
         Y <strong class="text-white">ReNaval es tu mejor aliado</strong>. Estamos comprometidos con impulsar tu operación, reducir costos y maximizar resultados en cada proyecto.
       </p>
 
-      <!-- Botón WhatsApp -->
       <a href="https://wa.me/573113356201?text=Hola%20ReNaval%2C%20me%20interesa%20obtener%20informaci%C3%B3n%20sobre%20sus%20servicios."
          target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebe5c] text-white font-bold text-[1.05rem] px-8 py-4 rounded-full shadow-[0_8px_32px_rgba(37,211,102,0.35)] hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)] transition-all duration-300 hover:-translate-y-1 no-underline">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+         class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1ebe5c] text-white font-bold text-[0.98rem] sm:text-[1.05rem] px-6 sm:px-8 py-3.5 sm:py-4 rounded-full shadow-[0_8px_32px_rgba(37,211,102,0.35)] hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)] transition-all duration-300 hover:-translate-y-1 no-underline max-w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
         </svg>
         Contáctanos por WhatsApp
       </a>
 
-      <p class="text-white/40 text-sm mt-5">Respuesta rápida · Sin compromiso · Cotización gratuita</p>
+      <p class="text-white/40 text-xs sm:text-sm mt-5">Respuesta rápida · Sin compromiso · Cotización gratuita</p>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-[#2D3137] pt-[72px]">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12">
+  <footer class="bg-[#2D3137] pt-14 sm:pt-[72px]">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 pb-12">
         <div>
-          <img src="/images/logo.png" alt="ReNaval" class="h-12 w-auto mb-4 brightness-0 invert opacity-90" />
+          <img src="/images/logo.png" alt="ReNaval" class="h-11 sm:h-12 w-auto mb-4 brightness-0 invert opacity-90" />
           <p class="text-white/55 text-sm leading-relaxed mb-5">Soluciones Integrales de Ingeniería con calidad certificada y compromiso en cada proyecto.</p>
           <div class="flex flex-wrap gap-2">
             <span class="bg-white/10 text-white/70 text-[0.75rem] font-semibold px-3 py-1 rounded-md">ISO 9001</span>
@@ -589,24 +659,29 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
         <div>
-          <h4 class="text-white text-base font-bold mb-5 pb-2.5 border-b-2 border-white/10">Navegación</h4>
+          <h4 class="text-white text-base font-bold mb-4 sm:mb-5 pb-2.5 border-b-2 border-white/10">Navegación</h4>
           <ul class="list-none flex flex-col gap-2.5 m-0 p-0">
             <li><a href="#inicio" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Inicio</a></li>
             <li><a href="#nosotros" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Nosotros</a></li>
-            <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Servicios</a></li>
+            <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Soluciones</a></li>
+            <li><a href="#experiencia" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Experiencia</a></li>
+            <li><a href="#galeria" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Galería</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white text-base font-bold mb-5 pb-2.5 border-b-2 border-white/10">Soluciones</h4>
+          <h4 class="text-white text-base font-bold mb-4 sm:mb-5 pb-2.5 border-b-2 border-white/10">Soluciones</h4>
           <ul class="list-none flex flex-col gap-2.5 m-0 p-0">
             <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Metalmecánica</a></li>
             <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Montajes Estructurales</a></li>
+            <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Mantenimiento de Válvulas</a></li>
+            <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Equipos Rotativos</a></li>
             <li><a href="#servicios" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Ingeniería Civil</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white text-base font-bold mb-5 pb-2.5 border-b-2 border-white/10">Contacto</h4>
+          <h4 class="text-white text-base font-bold mb-4 sm:mb-5 pb-2.5 border-b-2 border-white/10">Contacto</h4>
           <p class="text-white/55 text-sm mb-2.5">📞 311 335 6201</p>
+          <p class="text-white/55 text-sm mb-2.5">📱 320 541 9121</p>
           <p class="text-white/55 text-sm mb-2.5">✉️ ingbartelemy24@gmail.com</p>
           <p class="text-white/55 text-sm mb-2.5">🌐 www.renaval.com</p>
         </div>

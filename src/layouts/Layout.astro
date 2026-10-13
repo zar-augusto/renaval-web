@@ -92,14 +92,28 @@ import '../styles/global.css';
 			}
 
 			if (hamburger && navLinks) {
-				hamburger.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+				hamburger.addEventListener('click', (e) => {
+					e.stopPropagation();
+					menuOpen ? closeMenu() : openMenu();
+				});
 				navLinks.querySelectorAll('a').forEach(link => {
 					link.addEventListener('click', closeMenu);
+				});
+				// Cerrar al hacer clic fuera del menú
+				document.addEventListener('click', (e) => {
+					if (menuOpen && !navLinks.contains(e.target as Node) && !hamburger.contains(e.target as Node)) {
+						closeMenu();
+					}
 				});
 				// Cerrar con ESC
 				document.addEventListener('keydown', (e) => {
 					if (e.key === 'Escape' && menuOpen) closeMenu();
 				});
+			}
+
+			// Asegurar que al cargar la página sin hash el scroll inicie en el tope
+			if (!window.location.hash && window.scrollY > 0) {
+				window.scrollTo(0, 0);
 			}
 
 			// Scroll Reveal con IntersectionObserver
