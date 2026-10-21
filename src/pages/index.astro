@@ -357,13 +357,9 @@ import Layout from '../layouts/Layout.astro';
             </svg>
           </button>
 
-          <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 flex items-end justify-between gap-3">
-            <div>
-              <p id="carousel-caption" class="text-white font-bold text-base sm:text-lg leading-tight drop-shadow">Soldadura Naval</p>
-              <p id="carousel-sub" class="text-white/70 text-xs sm:text-sm mt-0.5">Foto 1 de 12</p>
-            </div>
+          <div class="absolute bottom-0 right-0 p-4 sm:p-5 flex justify-end">
             <button id="carousel-zoom-btn" type="button"
-                    class="bg-white/20 hover:bg-white/35 backdrop-blur-sm text-white p-2.5 rounded-lg transition-all border border-white/20 flex-shrink-0"
+                    class="bg-white/25 hover:bg-white/40 backdrop-blur-md text-white p-2.5 rounded-lg transition-all border border-white/30 flex-shrink-0 shadow-lg"
                     aria-label="Ver foto en tamaño completo (Zoom)">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M11 17A6 6 0 1 0 11 5a6 6 0 0 0 0 12zm-3-6h6m-3-3v6"/>
@@ -400,13 +396,9 @@ import Layout from '../layouts/Layout.astro';
       </svg>
     </button>
 
-    <div class="flex flex-col items-center gap-3 max-w-5xl w-full">
-      <img id="lb-img" src="" alt="" class="max-h-[78vh] max-w-full rounded-xl shadow-2xl object-contain select-none"
+    <div class="flex flex-col items-center max-w-5xl w-full">
+      <img id="lb-img" src="" alt="" class="max-h-[85vh] max-w-full rounded-xl shadow-2xl object-contain select-none"
            style="transition:opacity .18s ease;" />
-      <div class="flex items-center gap-3">
-        <p id="lb-caption" class="text-white/90 text-sm sm:text-base font-semibold text-center"></p>
-        <span id="lb-counter" class="text-white/50 text-xs sm:text-sm whitespace-nowrap"></span>
-      </div>
     </div>
 
     <button id="lb-next" type="button"
@@ -439,14 +431,10 @@ import Layout from '../layouts/Layout.astro';
       let lbOpen = false;
 
       const cImg   = document.getElementById('carousel-img');
-      const cCap   = document.getElementById('carousel-caption');
-      const cSub   = document.getElementById('carousel-sub');
       const thumbs = document.getElementById('carousel-thumbs');
       const dots   = document.getElementById('carousel-dots');
       const lb     = document.getElementById('lightbox');
       const lbImg  = document.getElementById('lb-img');
-      const lbCap  = document.getElementById('lb-caption');
-      const lbCnt  = document.getElementById('lb-counter');
 
       if (!cImg || !thumbs || !dots) return;
 
@@ -480,8 +468,6 @@ import Layout from '../layouts/Layout.astro';
           cImg.alt = item.desc; 
           cImg.style.opacity = '1'; 
         }, 150);
-        cCap.textContent = item.label;
-        cSub.textContent = 'Foto ' + (idx + 1) + ' de ' + GALLERY.length;
 
         var allThumbs = thumbs.querySelectorAll('button');
         allThumbs.forEach(function(t, i) {
@@ -512,8 +498,6 @@ import Layout from '../layouts/Layout.astro';
           lbImg.alt = item.desc; 
           lbImg.style.opacity = '1'; 
         }, 120);
-        lbCap.textContent = item.label;
-        lbCnt.textContent = (idx + 1) + ' / ' + GALLERY.length;
       }
 
       function openLb() {
