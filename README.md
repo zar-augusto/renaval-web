@@ -65,4 +65,4 @@ npm run dev
 
 ---
 
-*© 2024 ReNaval – Soluciones Integrales de Ingeniería*
+*© 2026 ReNaval – Soluciones Integrales de Ingeniería*

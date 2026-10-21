@@ -27,28 +27,31 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- HERO -->
   <section class="min-h-screen bg-gradient-to-br from-[#063350] via-[#0A4B75] to-[#1a7ab5] flex flex-col items-center justify-center relative overflow-hidden pt-[110px] px-4 sm:px-6 pb-[70px] scroll-mt-20" id="inicio">
-    <div class="absolute inset-0 bg-[url('/images/hero-bg.png')] bg-center bg-cover bg-no-repeat opacity-12"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,rgba(0,163,224,0.15)_0%,transparent_60%)]"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-[#063350]/70 to-transparent"></div>
+    <!-- Imagen de obra de fondo con máxima presencia y nitidez -->
+    <div class="absolute inset-0 bg-[url('/images/PHOTO-2026-09-25-07-15-55.jpg')] bg-center bg-cover bg-no-repeat opacity-75 sm:opacity-80 scale-100"></div>
+    <!-- Capa oscura cinematográfica para resaltar la obra y blindar el contraste del texto -->
+    <div class="absolute inset-0 bg-[#062438]/55"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#062438] via-transparent to-[#062438]/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#062438]/60 via-transparent to-[#062438]/60"></div>
     
-    <div class="relative z-10 text-center max-w-[820px] mx-auto w-full my-auto">
+    <div class="relative z-10 text-center max-w-[840px] mx-auto w-full my-auto px-2">
       <div class="flex flex-wrap gap-2 sm:gap-2.5 justify-center mb-6 sm:mb-8">
-        <span class="bg-white/10 border border-white/25 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-sm tracking-wide">PMI</span>
-        <span class="bg-white/10 border border-white/25 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-sm tracking-wide">ISO 9001</span>
-        <span class="bg-white/10 border border-white/25 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-sm tracking-wide">AWS D1.1-D1.7</span>
-        <span class="bg-white/10 border border-white/25 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-sm tracking-wide">IACS</span>
+        <span class="bg-[#062438]/70 border border-white/30 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-md tracking-wide shadow-md">PMI</span>
+        <span class="bg-[#062438]/70 border border-white/30 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-md tracking-wide shadow-md">ISO 9001</span>
+        <span class="bg-[#062438]/70 border border-white/30 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-md tracking-wide shadow-md">AWS D1.1-D1.7</span>
+        <span class="bg-[#062438]/70 border border-white/30 text-white text-[0.72rem] sm:text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full backdrop-blur-md tracking-wide shadow-md">IACS</span>
       </div>
-      <h1 class="text-[clamp(2.1rem,6vw,4.2rem)] font-extrabold text-white mb-4 sm:mb-5 leading-tight">
+      <h1 class="text-[clamp(2.1rem,6vw,4.2rem)] font-extrabold text-white mb-4 sm:mb-5 leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
         Soluciones Integrales<br/>
-        <span class="bg-gradient-to-r from-[#00A3E0] to-[#F2B800] bg-clip-text text-transparent">de Ingeniería</span>
+        <span class="bg-gradient-to-r from-[#00c0ff] to-[#F2B800] bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">de Ingeniería</span>
       </h1>
-      <p class="text-[clamp(0.98rem,2.2vw,1.2rem)] text-white/80 mb-8 sm:mb-10 leading-relaxed max-w-[620px] mx-auto">
+      <p class="text-[clamp(1rem,2.2vw,1.25rem)] text-white font-medium mb-8 sm:mb-10 leading-relaxed max-w-[640px] mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
         Aliados estratégicos para proyectos de ingeniería naval, industrial y civil.<br class="hidden sm:block"/>
         Calidad, precisión y entrega de valor en cada operación.
       </p>
       <div class="flex flex-col sm:flex-row gap-3.5 justify-center items-center max-w-sm sm:max-w-none mx-auto">
-        <a href="#servicios" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-[#F2B800] text-[#2D3137] hover:bg-[#e0aa00] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(242,184,0,0.35)]">Ver Soluciones</a>
-        <a href="#contacto" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-transparent text-white border-2 border-white/40 hover:bg-white/10 hover:border-white hover:-translate-y-0.5">Solicitar Cotización</a>
+        <a href="#servicios" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-[#F2B800] text-[#2D3137] hover:bg-[#e0aa00] hover:-translate-y-0.5 shadow-[0_6px_24px_rgba(0,0,0,0.4)]">Ver Soluciones</a>
+        <a href="#contacto" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-['Outfit'] text-[0.95rem] font-bold px-8 py-3.5 rounded-xl transition-all tracking-wide bg-[#062438]/60 text-white border-2 border-white/70 hover:bg-white hover:text-[#062438] hover:border-white hover:-translate-y-0.5 backdrop-blur-md shadow-[0_6px_24px_rgba(0,0,0,0.3)]">Solicitar Cotización</a>
       </div>
     </div>
     
@@ -145,7 +148,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="text-[0.72rem] font-extrabold text-[#00A3E0] tracking-widest mb-3">01</div>
           <div class="text-4xl mb-4 block">📋</div>
           <h3 class="text-base font-bold text-[#2D3137] mb-3 leading-snug">Asesoría para Proyectos</h3>
-          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Gerencia y evaluación de parámetros en proyectos de construcción y reparación naval, estructuras metálicas y obras civiles mediante metodologías PMI.</p>
+          <p class="text-sm text-[#64748b] leading-relaxed mb-4">Gerencia y evaluación de parámetros en proyectos de construcción y reparación naval, estructuras metálicas y obras civiles mediante enfoque PMI.</p>
           <div class="flex flex-wrap gap-1.5">
             <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">PMI</span>
             <span class="text-[0.72rem] font-semibold bg-[#F8FAFC] text-[#64748b] px-2.5 py-1 rounded-md transition-colors group-hover:bg-[#00A3E0]/10 group-hover:text-[#00A3E0]">Gestión</span>
@@ -613,8 +616,10 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- CTA WHATSAPP -->
   <section class="relative py-16 sm:py-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-[#0A4B75] via-[#063350] to-[#2D3137]"></div>
-    <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #00A3E0 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <!-- Fondo con foto de obra destacada y superposición moderna -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#063350] via-[#0A4B75] to-[#041c2c]"></div>
+    <div class="absolute inset-0 bg-[url('/images/PHOTO-2026-09-25-07-16-04.jpg')] bg-center bg-cover bg-no-repeat opacity-35"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#063350] via-[#063350]/75 to-[#063350]/80"></div>
 
     <div class="relative max-w-[900px] mx-auto px-4 sm:px-6 text-center">
       <div class="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#F2B800]/15 border border-[#F2B800]/30 mb-5 sm:mb-6">
@@ -687,7 +692,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
       <div class="border-t border-white/10 py-6 text-center">
-        <p class="text-white/35 text-[0.85rem] m-0">&copy; 2024 ReNaval – Soluciones Integrales de Ingeniería. Todos los derechos reservados.</p>
+        <p class="text-white/35 text-[0.85rem] m-0">&copy; 2026 ReNaval – Soluciones Integrales de Ingeniería. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
