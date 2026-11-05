@@ -16,6 +16,7 @@ import Layout from '../layouts/Layout.astro';
         <li><a href="#experiencia" class="block w-full md:w-auto text-white/85 no-underline text-base md:text-sm font-medium px-4 md:px-3.5 py-3 md:py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Experiencia</a></li>
         <li><a href="#clientes" class="block w-full md:w-auto text-white/85 no-underline text-base md:text-sm font-medium px-4 md:px-3.5 py-3 md:py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Clientes</a></li>
         <li><a href="#galeria" class="block w-full md:w-auto text-white/85 no-underline text-base md:text-sm font-medium px-4 md:px-3.5 py-3 md:py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Galería</a></li>
+        <li><a href="#casos-de-exito" class="block w-full md:w-auto text-white/85 no-underline text-base md:text-sm font-medium px-4 md:px-3.5 py-3 md:py-2 rounded-lg transition-colors hover:text-white hover:bg-white/10">Casos de Éxito</a></li>
         <li><a href="#contacto" class="block text-center w-full md:w-auto bg-[#F2B800] text-[#2D3137] font-bold rounded-lg px-4 py-3 md:py-2 transition-transform hover:-translate-y-px hover:bg-[#e0aa00] text-base md:text-sm mt-1 md:mt-0">Cotizar</a></li>
       </ul>
       <button class="md:hidden flex flex-col justify-center items-center gap-1.5 bg-transparent border-none cursor-pointer p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/40" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
@@ -567,6 +568,250 @@ import Layout from '../layouts/Layout.astro';
     })();
   </script>
 
+  <!-- CASOS DE ÉXITO -->
+  <section class="py-16 sm:py-24 bg-white scroll-mt-20 border-t border-slate-100" id="casos-de-exito">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 sm:mb-16">
+        <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">
+          Resultados Comprobados
+        </div>
+        <h2 class="text-[clamp(1.9rem,4vw,2.8rem)] font-extrabold text-[#2D3137] mb-4">
+          Casos de <span class="text-[#00A3E0]">Éxito</span>
+        </h2>
+        <p class="text-[1.02rem] text-[#64748b] max-w-[620px] mx-auto">
+          Proyectos de alta exigencia donde garantizamos cumplimiento en tiempo, optimización de costos y máxima calidad técnica para nuestros clientes.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tarjeta 1: Serviport -->
+        <article class="bg-[#F8FAFC] border border-slate-200/80 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(10,75,117,0.06)] hover:shadow-[0_12px_32px_rgba(10,75,117,0.12)] transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <!-- Contenedor con las 2 Imágenes de Serviport -->
+          <div class="relative w-full h-56 bg-slate-100 overflow-hidden border-b border-slate-200/70">
+            <div class="grid grid-cols-2 h-full gap-0.5 bg-slate-200">
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/serviport-cubierta-1.jpg" 
+                  alt="Cubierta principal con marmolina verde esmeralda - Serviport" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/serviport-cubierta-2.jpg" 
+                  alt="Segunda cubierta y proa con marmolina verde esmeralda - Serviport" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+            </div>
+            <span class="absolute top-3.5 left-3.5 bg-[#0A4B75]/90 backdrop-blur-sm text-white text-[0.72rem] font-bold px-3 py-1 rounded-full shadow-md tracking-wide z-10">
+              Serviport
+            </span>
+            <span class="absolute bottom-2.5 right-2.5 bg-black/60 backdrop-blur-sm text-white text-[0.68rem] font-medium px-2 py-0.5 rounded shadow z-10 flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-[#00A3E0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              2 fotos
+            </span>
+          </div>
+
+          <!-- Contenido Card -->
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-2 text-xs font-bold text-[#00A3E0] uppercase tracking-wider">
+                <span class="inline-block w-2 h-2 rounded-full bg-[#00A3E0]"></span>
+                Mantenimiento de Cubiertas
+              </div>
+              <h3 class="text-lg font-bold text-[#2D3137] mb-3">
+                Acabado con Marmolina Verde Esmeralda
+              </h3>
+              <p class="text-sm sm:text-[0.95rem] text-[#64748b] leading-relaxed">
+                Para la empresa Serviport se realizó el mantenimiento a la cubierta principal y segunda cubierta en la proa aplicando marmolina para un acabado de lujo con color verde esmeralda. Este proyecto fue ejecutado en un periodo de 45 días para un área de mantenimiento de 240 m², optimizando el alcance, tiempo y costo para nuestro cliente.
+              </p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-slate-200/80 grid grid-cols-2 gap-3 text-xs">
+              <div class="bg-white p-2.5 rounded-lg border border-slate-200/60">
+                <span class="block text-slate-400 font-medium text-[0.7rem] uppercase">Plazo</span>
+                <span class="font-bold text-[#0A4B75]">45 Días</span>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg border border-slate-200/60">
+                <span class="block text-slate-400 font-medium text-[0.7rem] uppercase">Área</span>
+                <span class="font-bold text-[#0A4B75]">240 m²</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 2: Astilleros Escamilla -->
+        <article class="bg-[#F8FAFC] border border-slate-200/80 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(10,75,117,0.06)] hover:shadow-[0_12px_32px_rgba(10,75,117,0.12)] transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <!-- Contenedor con Fotos del Proceso de Fabricación de Malacates -->
+          <div class="relative w-full h-56 bg-slate-100 overflow-hidden border-b border-slate-200/70">
+            <div class="grid grid-cols-2 grid-rows-2 h-full gap-0.5 bg-slate-200">
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/escamilla-malacate-2.jpg" 
+                  alt="Armado y medición de estructura de malacate - Astilleros Escamilla" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/escamilla-malacate-3.jpg" 
+                  alt="Soldadura y ensamble vertical de malacate - Astilleros Escamilla" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/escamilla-malacate-5.jpg" 
+                  alt="Estructura metálica de malacate armada - Astilleros Escamilla" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/escamilla-malacate-4.jpg" 
+                  alt="Malacate terminado con pintura y acabado de calidad - Astilleros Escamilla" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+            </div>
+            <span class="absolute top-3.5 left-3.5 bg-[#0A4B75]/90 backdrop-blur-sm text-white text-[0.72rem] font-bold px-3 py-1 rounded-full shadow-md tracking-wide z-10">
+              Astilleros Escamilla
+            </span>
+            <span class="absolute bottom-2.5 right-2.5 bg-black/60 backdrop-blur-sm text-white text-[0.68rem] font-medium px-2 py-0.5 rounded shadow z-10 flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-[#00A3E0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              4 fotos
+            </span>
+          </div>
+
+          <!-- Contenido Card -->
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-2 text-xs font-bold text-[#00A3E0] uppercase tracking-wider">
+                <span class="inline-block w-2 h-2 rounded-full bg-[#00A3E0]"></span>
+                Fabricación Naval
+              </div>
+              <h3 class="text-lg font-bold text-[#2D3137] mb-3">
+                Fabricación de 4 Malacates
+              </h3>
+              <p class="text-sm sm:text-[0.95rem] text-[#64748b] leading-relaxed">
+                Para la empresa Astilleros Escamilla se fabricaron 4 malacates de acuerdo al cronograma y costos estimados, cumpliendo con normas de calidad.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-200/80 grid grid-cols-2 gap-3 text-xs">
+              <div class="bg-white p-2.5 rounded-lg border border-slate-200/60">
+                <span class="block text-slate-400 font-medium text-[0.7rem] uppercase">Producción</span>
+                <span class="font-bold text-[#0A4B75]">4 Unidades</span>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg border border-slate-200/60">
+                <span class="block text-slate-400 font-medium text-[0.7rem] uppercase">Estándar</span>
+                <span class="font-bold text-[#0A4B75]">Normas de Calidad</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 3: Caso Reparación de Casco -->
+        <article class="bg-[#F8FAFC] border border-slate-200/80 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(10,75,117,0.06)] hover:shadow-[0_12px_32px_rgba(10,75,117,0.12)] transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <!-- Contenedor con las 4 Imágenes de Reparación de Casco -->
+          <div class="relative w-full h-56 bg-slate-100 overflow-hidden border-b border-slate-200/70">
+            <div class="grid grid-cols-2 grid-rows-2 h-full gap-0.5 bg-slate-200">
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/casco-acero-4.jpg" 
+                  alt="Oxicorte y retiro de láminas de acero en casco" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/casco-acero-1.jpg" 
+                  alt="Ajuste y montaje de nuevas planchas de acero en casco" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/casco-acero-2.jpg" 
+                  alt="Soldadura y recubrimiento anticorrosivo en casco" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+              <div class="relative h-full overflow-hidden group/img cursor-pointer">
+                <img 
+                  src="/images/casco-acero-3.jpg" 
+                  alt="Acabado final del casco de la embarcación en varadero" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110" 
+                  loading="lazy" 
+                />
+                <div class="absolute inset-0 bg-black/10 opacity-0 group-hover/img:opacity-100 transition-opacity"></div>
+              </div>
+            </div>
+            <span class="absolute top-3.5 left-3.5 bg-[#0A4B75]/90 backdrop-blur-sm text-white text-[0.72rem] font-bold px-3 py-1 rounded-full shadow-md tracking-wide z-10">
+              Reparación Naval
+            </span>
+            <span class="absolute bottom-2.5 right-2.5 bg-black/60 backdrop-blur-sm text-white text-[0.68rem] font-medium px-2 py-0.5 rounded shadow z-10 flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-[#00A3E0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              4 fotos
+            </span>
+          </div>
+
+          <!-- Contenido Card -->
+          <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-2 text-xs font-bold text-[#00A3E0] uppercase tracking-wider">
+                <span class="inline-block w-2 h-2 rounded-full bg-[#00A3E0]"></span>
+                Estructura y Soldadura
+              </div>
+              <h3 class="text-lg font-bold text-[#2D3137] mb-3">
+                Reemplazo de Acero en Casco
+              </h3>
+              <p class="text-sm sm:text-[0.95rem] text-[#64748b] leading-relaxed">
+                Se realizó el cambio de 1 tonelada de acero en el casco de esta embarcación en 8 días, dando estricto cumplimiento a los requisitos del cliente y otros interesados (stakeholders).
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-200/80 grid grid-cols-2 gap-3 text-xs">
+              <div class="bg-white p-2.5 rounded-lg border border-slate-200/60">
+                <span class="block text-slate-400 font-medium text-[0.7rem] uppercase">Material</span>
+                <span class="font-bold text-[#0A4B75]">1 Tonelada Acero</span>
+              </div>
+              <div class="bg-white p-2.5 rounded-lg border border-slate-200/60">
+                <span class="block text-slate-400 font-medium text-[0.7rem] uppercase">Tiempo récord</span>
+                <span class="font-bold text-[#0A4B75]">8 Días</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
 
   <!-- CONTACTO -->
   <section class="py-16 sm:py-24 bg-[#F8FAFC] scroll-mt-20" id="contacto">
@@ -706,6 +951,7 @@ import Layout from '../layouts/Layout.astro';
             <li><a href="#experiencia" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Experiencia</a></li>
             <li><a href="#clientes" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Clientes</a></li>
             <li><a href="#galeria" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Galería</a></li>
+            <li><a href="#casos-de-exito" class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]">Casos de Éxito</a></li>
           </ul>
         </div>
         <div>
