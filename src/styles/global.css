@@ -152,6 +152,13 @@
   animation: pulseRadar 3.2s ease-in-out infinite;
 }
 
+.whatsapp-float-btn {
+  bottom: max(1.25rem, env(safe-area-inset-bottom, 1.25rem));
+  right: max(1.25rem, env(safe-area-inset-right, 1.25rem));
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
 /* Clases de Scroll Reveal (Animación al entrar en pantalla) */
 .reveal-init {
   opacity: 0;
