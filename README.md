@@ -61,7 +61,7 @@ npm run dev
 
 **Gerente de Proyecto:** Bayron Bartelemy  
 📞 311 335 6201 / 320 541 9121  
-✉️ ingbartelemy24@gmail.com
+✉️ gerencia@renaval.com
 
 ---
 
