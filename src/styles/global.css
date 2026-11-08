@@ -83,39 +83,44 @@
 .revealed { opacity: 1 !important; transform: translateY(0) !important; }
 
 /* ===================================================
-   ANIMACIONES MODERNAS & SCROLL REVEAL SUAVE
+   ANIMACIONES MODERNAS & SCROLL REVEAL SUAVE (Optimizado)
    =================================================== */
 
-/* Zoom atmosférico suave en el fondo del Hero */
+/* Zoom atmosférico suave en el fondo del Hero (solo en pantallas de escritorio para máximo rendimiento móvil) */
 @keyframes heroKenBurns {
   0% { transform: scale(1); }
-  50% { transform: scale(1.06); }
+  50% { transform: scale(1.04); }
   100% { transform: scale(1); }
 }
 
-.animate-hero-bg {
-  animation: heroKenBurns 24s ease-in-out infinite alternate;
-  will-change: transform;
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .animate-hero-bg {
+    animation: heroKenBurns 28s ease-in-out infinite alternate;
+  }
 }
 
-/* Aura sutil y luminosa detrás del logotipo en el Hero */
+/* Aura sutil detrás del logotipo */
 @keyframes logoGlow {
-  0%, 100% { opacity: 0.35; transform: scale(0.95); }
-  50% { opacity: 0.75; transform: scale(1.08); }
+  0%, 100% { opacity: 0.35; transform: scale(0.98); }
+  50% { opacity: 0.70; transform: scale(1.04); }
 }
 
-.animate-logo-glow {
-  animation: logoGlow 6s ease-in-out infinite;
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .animate-logo-glow {
+    animation: logoGlow 6s ease-in-out infinite;
+  }
 }
 
-/* Levitación sutil y fluida */
+/* Levitación sutil */
 @keyframes floatSubtle {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-4px); }
 }
 
-.animate-float-subtle {
-  animation: floatSubtle 4.5s ease-in-out infinite;
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .animate-float-subtle {
+    animation: floatSubtle 5s ease-in-out infinite;
+  }
 }
 
 /* Destello / reflejo de luz dinámico en botones principales */
@@ -162,30 +167,26 @@
 /* Clases de Scroll Reveal (Animación al entrar en pantalla) */
 .reveal-init {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-left {
   opacity: 0;
-  transform: translateX(-36px);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateX(-30px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-right {
   opacity: 0;
-  transform: translateX(36px);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateX(30px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.94);
-  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: scale(0.95);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-visible {
