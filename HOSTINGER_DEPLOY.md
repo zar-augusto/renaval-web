@@ -65,3 +65,4 @@ Si realizas cambios en el código y deseas crear un nuevo ZIP para Hostinger, ej
 npm run package:hostinger
 ```
 Esto reconstruirá el sitio y actualizará automáticamente `hostinger-public_html.zip`.
+
