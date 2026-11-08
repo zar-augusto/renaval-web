@@ -18,6 +18,9 @@
     "astro": "^7.3.4",
     "tailwindcss": "^4.3.3"
   },
+  "overrides": {
+    "undici": ">=8.12.2"
+  },
   "allowScripts": {
     "esbuild": true
   }
