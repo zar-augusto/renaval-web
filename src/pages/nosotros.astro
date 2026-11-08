@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <main class="min-h-screen bg-[#F8FAFC] pt-28 pb-20">
+    <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
+      <!-- Breadcrumb -->
+      <nav class="text-xs text-slate-500 mb-6 flex items-center gap-2" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-[#0A4B75] no-underline">Inicio</a>
+        <span>/</span>
+        <span class="text-[#0A4B75] font-semibold">Nosotros</span>
+      </nav>
+
+      <div class="bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-10 shadow-sm mb-10">
+        <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">Sobre Nosotros</div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#2D3137] mb-6">Quiénes Somos – ReNaval</h1>
+        <p class="text-lg text-slate-700 leading-relaxed mb-6 font-medium">
+          ReNaval es una compañía colombiana de ingeniería multidisciplinaria orientada a satisfacer las necesidades de mantenimiento, fabricación y montajes en los sectores naval, metalmecánico, industrial y civil.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          Nuestra labor se fundamenta en la excelencia técnica, la rigurosidad operativa y el compromiso total con los plazos de entrega. Guiados por las mejores prácticas del <strong>Project Management Institute (PMI)</strong>, <strong>ISO 9001</strong> y normativas internacionales de soldadura y sociedades clasificadoras marítimas (<strong>AWS D1.1–D1.7 e IACS</strong>), aportamos valor estratégico a cada operación.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+          <div class="bg-[#F8FAFC] border border-[#e2e8f0] p-6 rounded-xl">
+            <h3 class="text-[#0A4B75] font-bold text-lg mb-2">Misión</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Proveer soluciones de ingeniería de alto impacto y precisión técnica que maximicen la operatividad, seguridad y rendimiento de las instalaciones y embarcaciones de nuestros clientes.
+            </p>
+          </div>
+          <div class="bg-[#F8FAFC] border border-[#e2e8f0] p-6 rounded-xl">
+            <h3 class="text-[#0A4B75] font-bold text-lg mb-2">Visión</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Consolidarnos como el referente técnico y aliado estratégico preferente en ingeniería naval y metalmecánica en la región Caribe y Colombia para 2030.
+            </p>
+          </div>
+          <div class="bg-[#F8FAFC] border border-[#e2e8f0] p-6 rounded-xl">
+            <h3 class="text-[#0A4B75] font-bold text-lg mb-2">Valores</h3>
+            <ul class="text-slate-600 text-sm space-y-1.5 list-disc pl-4">
+              <li>Precisión y rigor técnico</li>
+              <li>Compromiso con el cronograma</li>
+              <li>Seguridad operativa y ambiental</li>
+              <li>Transparencia comercial</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 pt-8 mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div>
+            <h4 class="font-bold text-[#2D3137]">¿Desea cotizar un proyecto?</h4>
+            <p class="text-sm text-slate-500">Un especialista técnico analizará sus requerimientos.</p>
+          </div>
+          <div class="flex gap-3">
+            <a href="/contacto" class="bg-[#0A4B75] text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-[#063350] transition-colors no-underline">Contactar Asesor</a>
+            <a href="/" class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-slate-200 transition-colors no-underline">Ver Portada</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+

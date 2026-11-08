@@ -1,0 +1,86 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card/v1.json",
+  "name": "renaval-engineering-agent",
+  "displayName": "ReNaval – Soluciones Integrales de Ingeniería",
+  "description": "Herramientas de consulta de servicios y solicitud de cotizaciones para ingeniería naval, metalmecánica, mantenimiento industrial y obras civiles en ReNaval (Colombia).",
+  "version": "1.0.0",
+  "endpoint": "https://renaval.com/api/mcp",
+  "documentationUrl": "https://renaval.com/llms.txt",
+  "capabilities": {
+    "tools": {
+      "list": true
+    },
+    "resources": {
+      "list": true
+    },
+    "prompts": {
+      "list": true
+    }
+  },
+  "tools": [
+    {
+      "name": "solicitar_cotizacion_renaval",
+      "description": "Envía una solicitud formal de cotización directamente al buzón oficial gerencia@renaval.com.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "description": "Nombre de la persona o contacto solicitante"
+          },
+          "empresa": {
+            "type": "string",
+            "description": "Nombre de la empresa u organización"
+          },
+          "telefono": {
+            "type": "string",
+            "description": "Teléfono o celular de contacto con indicativo"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Correo electrónico corporativo para respuesta"
+          },
+          "servicio": {
+            "type": "string",
+            "enum": [
+              "Asesoría para Proyectos",
+              "Diseño y Fabricación Metalmecánica",
+              "Montajes Estructurales",
+              "Mantenimiento de Válvulas",
+              "Mantenimiento Equipos Rotativos",
+              "Montajes y Mantenimiento HVAC",
+              "Pintura y Sandblasting",
+              "Ingeniería Civil"
+            ],
+            "description": "Línea de servicio o especialidad requerida"
+          },
+          "mensaje": {
+            "type": "string",
+            "description": "Descripción detallada del proyecto o requerimiento técnico"
+          }
+        },
+        "required": ["nombre", "telefono", "email", "servicio", "mensaje"]
+      }
+    },
+    {
+      "name": "consultar_servicios_renaval",
+      "description": "Consulta el catálogo oficial de servicios técnicos, capacidades de taller y certificaciones de ReNaval.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "categoria": {
+            "type": "string",
+            "description": "Categoría opcional a filtrar (naval, metalmecanica, valvulas, rotativos, hvac, pintura, civil)"
+          }
+        }
+      }
+    }
+  ],
+  "vendor": {
+    "name": "ReNaval – Soluciones Integrales de Ingeniería",
+    "url": "https://renaval.com",
+    "contactEmail": "gerencia@renaval.com"
+  }
+}
+

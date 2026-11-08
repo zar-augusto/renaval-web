@@ -1,34 +1,51 @@
 # ==============================================================================
 # ReNaval - Configuración de Producción para Servidores Hostinger (Apache / LiteSpeed)
+# Incluye soporte para Agentes IA (RFC 8288 Link, WebMCP, llms.txt, Markdown)
 # ==============================================================================
 
 # 1. SEGURIDAD: Prevenir navegación de directorios
 Options -Indexes
 
-# 2. MOTOR DE REESCRITURA (mod_rewrite)
+# 2. TIPOS MIME ADICIONALES
+<IfModule mod_mime.c>
+  AddType text/markdown .md
+  AddType application/json .json
+</IfModule>
+
+# 3. MOTOR DE REESCRITURA (mod_rewrite)
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Permitir /.well-known/ para MCP Server Card (SEP-1649) y certificados SSL
+  RewriteRule ^\.well-known/ - [L]
 
   # Redirección obligatoria a HTTPS (SSL Seguro)
   RewriteCond %{HTTPS} !=on
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-  # Redirección de URLs sin extensión .html hacia archivo existente
+  # AGENTES IA: Negociación de contenido (Accept: text/markdown)
+  RewriteCond %{HTTP:Accept} text/markdown [NC]
+  RewriteCond %{REQUEST_URI} ^/$ [OR]
+  RewriteCond %{REQUEST_URI} ^/index(\.html)?$
+  RewriteRule ^.*$ /index.md [L]
+
+  # Redirección de URLs limpias sin extensión .html hacia archivo existente
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.html -f
   RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
 
-# 3. PÁGINA PERSONALIZADA DE ERROR 404
+# 4. PÁGINA PERSONALIZADA DE ERROR 404
 ErrorDocument 404 /404.html
 
-# 4. COMPRESIÓN GZIP / DEFLATE (Acelera carga del sitio hasta un 70%)
+# 5. COMPRESIÓN GZIP / DEFLATE (Acelera carga del sitio hasta un 70%)
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/plain
   AddOutputFilterByType DEFLATE text/html
   AddOutputFilterByType DEFLATE text/xml
   AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/markdown
   AddOutputFilterByType DEFLATE application/xml
   AddOutputFilterByType DEFLATE application/xhtml+xml
   AddOutputFilterByType DEFLATE application/rss+xml
@@ -40,15 +57,16 @@ ErrorDocument 404 /404.html
   AddOutputFilterByType DEFLATE font/woff
 </IfModule>
 
-# 5. CACHÉ DEL NAVEGADOR (Mayor velocidad para usuarios recurrentes)
+# 6. CACHÉ DEL NAVEGADOR
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
 
-  # HTML: Siempre fresco o máx 1 hora
+  # HTML & Markdown: Fresco
   ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/markdown "access plus 1 hour"
 
-  # CSS y JavaScript: 1 año con hashes
+  # CSS y JavaScript
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType application/x-javascript "access plus 1 year"
@@ -68,7 +86,7 @@ ErrorDocument 404 /404.html
   ExpiresByType application/font-woff2 "access plus 1 year"
 </IfModule>
 
-# 6. CABECERAS DE SEGURIDAD HTTP
+# 7. CABECERAS DE SEGURIDAD HTTP Y LINK HEADERS (RFC 8288 PARA AGENTES)
 <IfModule mod_headers.c>
   # Prevenir MIME-sniffing
   Header set X-Content-Type-Options "nosniff"
@@ -81,11 +99,20 @@ ErrorDocument 404 /404.html
 
   # Política de Referrer
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # RFC 8288: Anunciar llms.txt y Markdown alternativo para agentes en la portada
+  <FilesMatch "^(index\.html)?$">
+    Header set Link "</llms.txt>; rel=\"alternate\"; type=\"text/plain\", </index.md>; rel=\"alternate\"; type=\"text/markdown\""
+  </FilesMatch>
+
+  # Link header para llms.txt y markdown en general
+  <FilesMatch "^(llms\.txt|index\.md)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
 </IfModule>
 
-# 7. PROTEGER ARCHIVOS SENSIBLES Y OCULTOS
-<FilesMatch "^\.">
+# 8. PROTEGER ARCHIVOS SENSIBLES Y OCULTOS (Exceptuando .well-known)
+<FilesMatch "^\.(?!well-known)">
   Order allow,deny
   Deny from all
 </FilesMatch>
-

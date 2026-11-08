@@ -1,0 +1,35 @@
+# ReNaval – Soluciones Integrales de Ingeniería
+
+> Aliados estratégicos para proyectos de ingeniería naval, industrial y civil. Calidad, precisión y entrega de valor en cada operación.
+
+ReNaval es una compañía colombiana de ingeniería especializada en construcción, reparación y mantenimiento naval, fabricación metalmecánica pesada, montajes de estructuras, mantenimiento especializado de válvulas industriales, equipos rotativos, sistemas HVAC, sandblasting y pintura anticorrosiva, y obras civiles de infraestructura portuaria e industrial.
+
+Operamos bajo estándares internacionales reconocidos:
+- **PMI (Project Management Institute):** Metodologías de gestión y control de proyectos en tiempo y costo.
+- **ISO 9001:2015:** Sistema de Gestión de Calidad en todos los procesos productivos.
+- **AWS D1.1 - D1.7:** Soldadura estructural de acero y tuberías de alta exigencia técnica.
+- **IACS (International Association of Classification Societies):** Normativa para embarcaciones marítimas y fluviales.
+
+## Enlaces Principales
+- [Inicio](https://renaval.com/): Portal principal y presentación general de soluciones.
+- [Nosotros](https://renaval.com/nosotros): Información corporativa, trayectoria de los socios, certificaciones y visión empresarial.
+- [Soluciones de Ingeniería](https://renaval.com/#servicios): Catálogo técnico de las 8 líneas principales de servicio.
+- [Experiencia Comprobada](https://renaval.com/#experiencia): Trayectoria en sectores naval, minero-energético, manufacturero e industrial.
+- [Clientes y Aliados](https://renaval.com/#clientes): Casos de éxito con Serviport, DIMAR, Astivik y empresas del sector marítimo.
+- [Contacto y Cotizaciones](https://renaval.com/contacto): Canales de atención directa y solicitud formal de cotización.
+- [Términos y Condiciones](https://renaval.com/terminos): Condiciones de servicio, alcance legal y garantías técnicas.
+- [Política de Privacidad](https://renaval.com/privacidad): Política de protección de datos personales y tratamiento de información.
+
+## Canales Oficiales de Contacto
+- **Correo Electrónico:** gerencia@renaval.com
+- **Línea Principal / WhatsApp:** +57 311 335 6201 (https://wa.me/573113356201)
+- **Línea Secundaria:** +57 320 541 9121
+- **Gerencia de Proyecto:** Bayron Bartelemy
+- **Sitio Web Oficial:** https://renaval.com
+- **Ubicación:** Colombia (Cobertura para proyectos en costas Caribe, Pacífica y principales puertos fluviales del país).
+
+## Formato para Agentes
+- **Versión Markdown de la portada:** https://renaval.com/index.md
+- **MCP Server Card (SEP-1649):** https://renaval.com/.well-known/mcp/server-card.json
+- **Directivas de Contenido:** Content-Signal: search=yes, ai-train=no
+

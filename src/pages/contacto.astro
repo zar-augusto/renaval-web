@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <main class="min-h-screen bg-[#F8FAFC] pt-28 pb-20">
+    <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
+      <!-- Breadcrumb -->
+      <nav class="text-xs text-slate-500 mb-6 flex items-center gap-2" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-[#0A4B75] no-underline">Inicio</a>
+        <span>/</span>
+        <span class="text-[#0A4B75] font-semibold">Contacto</span>
+      </nav>
+
+      <div class="text-center mb-10">
+        <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-3">Atención Oficial</div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#2D3137] mb-3">Contacto Directo y Cotizaciones</h1>
+        <p class="text-slate-600 max-w-xl mx-auto text-base">
+          Comuníquese con nuestra gerencia de proyectos para cotizaciones, visitas técnicas a bordo o requerimientos industriales.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Tarjeta Informativa -->
+        <div class="bg-gradient-to-br from-[#063350] to-[#0A4B75] rounded-2xl p-8 text-white shadow-md flex flex-col justify-between">
+          <div>
+            <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-2xl font-bold mb-4 border border-white/20">RN</div>
+            <h2 class="text-xl font-bold mb-1">ReNaval</h2>
+            <p class="text-[#00A3E0] text-sm font-semibold mb-6">Soluciones Integrales de Ingeniería</p>
+            
+            <div class="space-y-4 text-sm">
+              <div>
+                <span class="block text-white/50 text-xs">Correo Oficial</span>
+                <a href="mailto:gerencia@renaval.com" class="text-white font-semibold hover:text-[#00A3E0] transition-colors break-all no-underline">
+                  gerencia@renaval.com
+                </a>
+              </div>
+              <div>
+                <span class="block text-white/50 text-xs">Línea Principal / WhatsApp</span>
+                <a href="https://wa.me/573113356201" class="text-white font-semibold hover:text-[#25D366] transition-colors no-underline flex items-center gap-1.5" target="_blank" rel="noopener noreferrer">
+                  <span>+57 311 335 6201</span>
+                </a>
+              </div>
+              <div>
+                <span class="block text-white/50 text-xs">Línea Secundaria</span>
+                <a href="tel:+573205419121" class="text-white font-semibold hover:text-[#00A3E0] transition-colors no-underline">
+                  +57 320 541 9121
+                </a>
+              </div>
+              <div>
+                <span class="block text-white/50 text-xs">Gerente de Proyecto</span>
+                <strong class="text-white">Bayron Bartelemy</strong>
+              </div>
+              <div>
+                <span class="block text-white/50 text-xs">Ubicación y Cobertura</span>
+                <span class="text-white/80">Colombia (Cobertura marítima y fluvial nacional)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/15">
+            <span class="text-xs text-white/60 block mb-2">Horario de Atención Técnica</span>
+            <span class="text-xs font-semibold text-white">Lunes a Sábado: 7:00 AM – 6:00 PM</span>
+            <span class="text-[0.72rem] text-[#F2B800] block mt-1">Disponibilidad 24/7 para emergencias navales</span>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="lg:col-span-2 bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-8 shadow-sm">
+          <h2 class="text-xl font-bold text-[#2D3137] mb-2">Envíe su Solicitud</h2>
+          <p class="text-sm text-slate-500 mb-6">Complete el formulario y le responderemos con un diagnóstico técnico preliminar.</p>
+
+          <form id="contactFormDedicated" action="https://formsubmit.co/gerencia@renaval.com" method="POST" class="flex flex-col gap-4" toolname="solicitar_cotizacion_renaval" tooldescription="Envía una solicitud formal de cotización a gerencia@renaval.com">
+            <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="Nueva Solicitud de Cotización - ReNaval Contacto">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="c_nombre" class="block text-xs font-bold text-slate-700 mb-1.5">Nombre Completo *</label>
+                <input type="text" id="c_nombre" name="nombre" required placeholder="Ej. Juan Pérez" toolparam="nombre" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] p-3 rounded-lg text-sm focus:outline-none focus:border-[#00A3E0]" />
+              </div>
+              <div>
+                <label for="c_empresa" class="block text-xs font-bold text-slate-700 mb-1.5">Empresa</label>
+                <input type="text" id="c_empresa" name="empresa" placeholder="Empresa o armador" toolparam="empresa" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] p-3 rounded-lg text-sm focus:outline-none focus:border-[#00A3E0]" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="c_telefono" class="block text-xs font-bold text-slate-700 mb-1.5">Teléfono *</label>
+                <input type="tel" id="c_telefono" name="telefono" required placeholder="+57 3XX XXX XXXX" toolparam="telefono" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] p-3 rounded-lg text-sm focus:outline-none focus:border-[#00A3E0]" />
+              </div>
+              <div>
+                <label for="c_email" class="block text-xs font-bold text-slate-700 mb-1.5">Correo Electrónico *</label>
+                <input type="email" id="c_email" name="email" required placeholder="correo@empresa.com" toolparam="email" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] p-3 rounded-lg text-sm focus:outline-none focus:border-[#00A3E0]" />
+              </div>
+            </div>
+
+            <div>
+              <label for="c_servicio" class="block text-xs font-bold text-slate-700 mb-1.5">Servicio Requerido *</label>
+              <select id="c_servicio" name="servicio" required toolparam="servicio" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] p-3 rounded-lg text-sm focus:outline-none focus:border-[#00A3E0]">
+                <option value="" disabled selected>Seleccione un servicio</option>
+                <option>Asesoría para Proyectos</option>
+                <option>Diseño y Fabricación Metalmecánica</option>
+                <option>Montajes Estructurales</option>
+                <option>Mantenimiento de Válvulas</option>
+                <option>Mantenimiento Equipos Rotativos</option>
+                <option>Montajes y Mantenimiento HVAC</option>
+                <option>Pintura y Sandblasting</option>
+                <option>Ingeniería Civil</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="c_mensaje" class="block text-xs font-bold text-slate-700 mb-1.5">Mensaje o Detalle del Requerimiento *</label>
+              <textarea id="c_mensaje" name="mensaje" rows="4" required placeholder="Describa el trabajo a realizar, ubicación y fecha tentativa..." toolparam="mensaje" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] p-3 rounded-lg text-sm focus:outline-none focus:border-[#00A3E0] resize-y"></textarea>
+            </div>
+
+            <button type="submit" id="c_submitBtn" class="bg-[#0A4B75] text-white font-bold p-3.5 rounded-lg text-sm hover:bg-[#063350] transition-colors mt-2">
+              Enviar Solicitud a gerencia@renaval.com &rarr;
+            </button>
+            <div id="c_formSuccess" class="hidden bg-green-50 text-green-700 border border-green-200 p-3.5 rounded-lg text-xs font-medium">¡Solicitud enviada! Nos comunicaremos prontamente.</div>
+            <div id="c_formError" class="hidden bg-red-50 text-red-700 border border-red-200 p-3.5 rounded-lg text-xs font-medium">Hubo un error. Escríbanos a gerencia@renaval.com.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+

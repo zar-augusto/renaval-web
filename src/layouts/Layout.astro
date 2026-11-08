@@ -14,14 +14,19 @@ import '../styles/global.css';
 		<meta name="keywords" content="ingeniería naval, metalmecánica, mantenimiento industrial, soldadura naval, válvulas, equipos rotativos, HVAC, sandblasting, pintura anticorrosiva, Colombia, Barranquilla" />
 		<meta name="robots" content="index, follow" />
 		<meta name="author" content="ReNaval – Soluciones Integrales de Ingeniería" />
-		<link rel="canonical" href="https://renaval.vercel.app/" />
+		<link rel="canonical" href="https://renaval.com/" />
+
+		<!-- Agentes IA y LLMs (RFC 8288 / llms.txt / Markdown / MCP) -->
+		<link rel="alternate" type="text/plain" href="/llms.txt" title="Resumen del Sitio para LLMs" />
+		<link rel="alternate" type="text/markdown" href="/index.md" title="Representación Markdown" />
+		<link rel="service-doc" type="application/json" href="/.well-known/mcp/server-card.json" title="MCP Server Card" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://renaval.vercel.app/" />
+		<meta property="og:url" content="https://renaval.com/" />
 		<meta property="og:title" content="ReNaval – Soluciones Integrales de Ingeniería Naval y Metalúrgica" />
 		<meta property="og:description" content="Aliados estratégicos en ingeniería naval, metalmecánica y mantenimiento industrial. Calidad certificada y +10 años de experiencia en Colombia." />
-		<meta property="og:image" content="https://renaval.vercel.app/images/quienes-somos-new.jpg" />
+		<meta property="og:image" content="https://renaval.com/images/quienes-somos-new.jpg" />
 		<meta property="og:locale" content="es_CO" />
 		<meta property="og:site_name" content="ReNaval" />
 
@@ -29,7 +34,7 @@ import '../styles/global.css';
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="ReNaval – Soluciones Integrales de Ingeniería" />
 		<meta name="twitter:description" content="Aliados estratégicos en ingeniería naval y metalmecánica. +10 años de experiencia en Colombia." />
-		<meta name="twitter:image" content="https://renaval.vercel.app/images/quienes-somos-new.jpg" />
+		<meta name="twitter:image" content="https://renaval.com/images/quienes-somos-new.jpg" />
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="/favicon.png" />
@@ -41,22 +46,140 @@ import '../styles/global.css';
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-		<!-- Structured Data: LocalBusiness -->
+		<!-- Structured Data Multi-Tipo (Corporation, LocalBusiness, Services, FAQPage, WebSite) -->
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
-			"@type": "LocalBusiness",
-			"name": "ReNaval – Soluciones Integrales de Ingeniería",
-			"description": "Empresa especializada en ingeniería naval, metalmecánica, montajes estructurales, mantenimiento de válvulas y equipos rotativos.",
-			"url": "https://renaval.vercel.app",
-			"logo": "https://renaval.vercel.app/images/logo-azul.png",
-			"image": "https://renaval.vercel.app/images/quienes-somos-new.jpg",
-			"telephone": "+573113356201",
-			"address": {
-				"@type": "PostalAddress",
-				"addressCountry": "CO"
-			},
-			"sameAs": ["https://wa.me/573113356201"]
+			"@graph": [
+				{
+					"@type": "Corporation",
+					"@id": "https://renaval.com/#corporation",
+					"name": "ReNaval – Soluciones Integrales de Ingeniería",
+					"alternateName": "ReNaval",
+					"url": "https://renaval.com",
+					"logo": "https://renaval.com/images/logo-azul.png",
+					"image": "https://renaval.com/images/quienes-somos-new.jpg",
+					"description": "Compañía de ingeniería naval, metalmecánica, montajes estructurales, mantenimiento de válvulas y equipos rotitivos en Colombia.",
+					"email": "gerencia@renaval.com",
+					"telephone": "+573113356201",
+					"address": {
+						"@type": "PostalAddress",
+						"addressCountry": "CO"
+					},
+					"knowsAbout": [
+						"Ingeniería Naval",
+						"Metalmecánica Pesada",
+						"Montajes Estructurales AWS D1.1",
+						"Mantenimiento de Válvulas Industriales",
+						"Alineación Láser de Equipos Rotativos",
+						"Sistemas HVAC Navales",
+						"Pintura y Sandblasting SSPC/NACE",
+						"Ingeniería Civil Portuaria"
+					],
+					"sameAs": [
+						"https://wa.me/573113356201",
+						"https://github.com/zar-augusto/renaval-web"
+					]
+				},
+				{
+					"@type": "LocalBusiness",
+					"@id": "https://renaval.com/#localbusiness",
+					"name": "ReNaval",
+					"parentOrganization": { "@id": "https://renaval.com/#corporation" },
+					"url": "https://renaval.com",
+					"telephone": "+573113356201",
+					"priceRange": "$$",
+					"currenciesAccepted": "COP, USD",
+					"paymentAccepted": "Transferencia bancaria, Facturación comercial",
+					"openingHours": "Mo-Sa 07:00-18:00",
+					"areaServed": {
+						"@type": "Country",
+						"name": "Colombia"
+					}
+				},
+				{
+					"@type": "Service",
+					"@id": "https://renaval.com/#service-naval",
+					"name": "Ingeniería y Reparación Naval",
+					"serviceType": "Ingeniería Naval",
+					"provider": { "@id": "https://renaval.com/#corporation" },
+					"description": "Reparaciones a flote, calderería de casco, cubiertas, mamparos y líneas de propulsión bajo normas IACS.",
+					"areaServed": "Colombia"
+				},
+				{
+					"@type": "Service",
+					"@id": "https://renaval.com/#service-metalmecanica",
+					"name": "Diseño y Fabricación Metalmecánica",
+					"serviceType": "Fabricación Industrial",
+					"provider": { "@id": "https://renaval.com/#corporation" },
+					"description": "Diseño, transformación y soldadura de estructuras pesadas bajo normas AWS D1.1 y D1.7.",
+					"areaServed": "Colombia"
+				},
+				{
+					"@type": "Service",
+					"@id": "https://renaval.com/#service-valvulas",
+					"name": "Mantenimiento y Recuperación de Válvulas",
+					"serviceType": "Mantenimiento Industrial",
+					"provider": { "@id": "https://renaval.com/#corporation" },
+					"description": "Overhaul, lapeado en sitio y pruebas hidrostáticas certificadas de válvulas de alta presión.",
+					"areaServed": "Colombia"
+				},
+				{
+					"@type": "Service",
+					"@id": "https://renaval.com/#service-rotativos",
+					"name": "Mantenimiento de Equipos Rotativos",
+					"serviceType": "Mecánica de Precisión",
+					"provider": { "@id": "https://renaval.com/#corporation" },
+					"description": "Alineación láser, balanceo dinámico y mantenimiento integral de bombas, motores, compresores y reductores.",
+					"areaServed": "Colombia"
+				},
+				{
+					"@type": "FAQPage",
+					"@id": "https://renaval.com/#faq",
+					"mainEntity": [
+						{
+							"@type": "Question",
+							"name": "¿Qué certificaciones y normas rigen las operaciones de ReNaval?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Operamos bajo metodologías PMI para gerencia de proyectos, sistema de gestión ISO 9001, normas de soldadura AWS D1.1 a D1.7 y estándares de sociedades clasificadoras IACS para buques."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿Cómo puedo solicitar una cotización formal de ingeniería?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Puede solicitar cotización escribiendo a gerencia@renaval.com, a través del formulario oficial en renaval.com/contacto o directamente vía WhatsApp al +57 311 335 6201."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿ReNaval atiende servicios de emergencia para embarcaciones?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Sí, disponemos de cuadrillas técnicas y especialistas de respuesta rápida 24/7 para reparaciones a flote en muelle y fondeadero."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "¿Cuál es la cobertura geográfica de ReNaval?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Ofrecemos cobertura en los principales puertos marítimos (Cartagena, Barranquilla, Santa Marta, Buenaventura) y corredores fluviales de Colombia."
+							}
+						}
+					]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://renaval.com/#website",
+					"url": "https://renaval.com",
+					"name": "ReNaval",
+					"inLanguage": "es-CO",
+					"publisher": { "@id": "https://renaval.com/#corporation" }
+				}
+			]
 		}
 		</script>
 	</head>
@@ -134,6 +257,85 @@ import '../styles/global.css';
 			document.querySelectorAll('.reveal-init, .reveal-left, .reveal-right, .reveal-scale, .reveal-elem').forEach(el => {
 				revealObserver.observe(el);
 			});
+
+			// WebMCP Tools Registration para Agentes en el Navegador
+			try {
+				const modelCtx = (navigator as any).modelContext;
+				if (modelCtx && typeof modelCtx.registerTool === 'function') {
+					modelCtx.registerTool({
+						name: 'solicitar_cotizacion_renaval',
+						description: 'Envía una solicitud formal de cotización de ingeniería a gerencia@renaval.com',
+						inputSchema: {
+							type: 'object',
+							properties: {
+								nombre: { type: 'string', description: 'Nombre completo del solicitante' },
+								empresa: { type: 'string', description: 'Empresa u organización' },
+								telefono: { type: 'string', description: 'Teléfono de contacto' },
+								email: { type: 'string', description: 'Correo electrónico de contacto' },
+								servicio: { 
+									type: 'string', 
+									enum: [
+										'Asesoría para Proyectos',
+										'Diseño y Fabricación Metalmecánica',
+										'Montajes Estructurales',
+										'Mantenimiento de Válvulas',
+										'Mantenimiento Equipos Rotativos',
+										'Montajes y Mantenimiento HVAC',
+										'Pintura y Sandblasting',
+										'Ingeniería Civil'
+									] 
+								},
+								mensaje: { type: 'string', description: 'Descripción o requerimiento del proyecto' }
+							},
+							required: ['nombre', 'telefono', 'email', 'servicio', 'mensaje']
+						},
+						execute: async (args: any) => {
+							const res = await fetch('https://formsubmit.co/ajax/gerencia@renaval.com', {
+								method: 'POST',
+								headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+								body: JSON.stringify({
+									_subject: `WebMCP: ${args.servicio} - ${args.nombre}`,
+									_template: 'table',
+									_captcha: 'false',
+									'Nombre': args.nombre,
+									'Empresa': args.empresa || 'N/A',
+									'Teléfono': args.telefono,
+									'Correo': args.email,
+									'Servicio': args.servicio,
+									'Mensaje': args.mensaje
+								})
+							});
+							return { success: res.ok, message: 'Cotización recibida exitosamente en gerencia@renaval.com' };
+						}
+					});
+
+					modelCtx.registerTool({
+						name: 'consultar_servicios_renaval',
+						description: 'Retorna el catálogo oficial de servicios de ReNaval, normas aplicables (ISO 9001, AWS D1.1, PMI, IACS) y canales de contacto.',
+						inputSchema: { type: 'object', properties: {} },
+						execute: async () => {
+							return {
+								empresa: 'ReNaval – Soluciones Integrales de Ingeniería',
+								correo: 'gerencia@renaval.com',
+								telefono: '+57 311 335 6201 / +57 320 541 9121',
+								servicios: [
+									'Asesoría para Proyectos (PMI)',
+									'Diseño y Fabricación Metalmecánica (AWS D1.1)',
+									'Montajes Estructurales',
+									'Mantenimiento y Recuperación de Válvulas',
+									'Mantenimiento de Equipos Rotativos',
+									'Montajes y Mantenimiento HVAC',
+									'Pintura y Sandblasting (SSPC/NACE)',
+									'Ingeniería Civil Portuaria e Industrial'
+								],
+								certificaciones: ['ISO 9001:2015', 'AWS D1.1-D1.7', 'PMI', 'IACS']
+							};
+						}
+					});
+				}
+			} catch (e) {
+				console.warn('WebMCP initialization note:', e);
+			}
 		</script>
 
 		<!-- WhatsApp Floating Button -->

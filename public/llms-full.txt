@@ -1,0 +1,69 @@
+# ReNaval – Soluciones Integrales de Ingeniería (Documentación Completa)
+
+## 1. Identidad Corporativa
+- **Nombre Comercial:** ReNaval – Soluciones Integrales de Ingeniería
+- **Misión:** Brindar soluciones de alta ingeniería para los sectores naval, metalmecánico, industrial y civil, garantizando precisión técnica, cumplimiento estricto de cronogramas y seguridad operativa bajo estándares internacionales.
+- **Lema:** Aliados en ingeniería naval, industrial y civil. Precisión y valor en cada operación.
+- **Gerencia de Proyecto:** Bayron Bartelemy
+- **Contacto Oficial:** gerencia@renaval.com | Tel: +57 311 335 6201 / +57 320 541 9121
+- **Sitio Web:** https://renaval.com
+
+---
+
+## 2. Líneas de Servicio Oficiales
+
+### 1. Asesoría y Gestión de Proyectos
+- Planeación, gerencia de proyectos bajo lineamientos del PMI (Project Management Institute).
+- Optimización de procesos con Lean Manufacturing, SMED, TPM y Kaizen.
+- Interventoría técnica y control de calidad en obra.
+
+### 2. Diseño y Fabricación Metalmecánica
+- Cálculo, diseño estructural y fabricación de piezas en acero naval y aceros especiales.
+- Soldadura calificada bajo normas AWS D1.1 (estructural) y AWS D1.2 (aluminio).
+- Transformación y corte de materiales de alta resistencia.
+
+### 3. Montajes Estructurales
+- Montaje e izaje de estructuras pesadas para buques, barcazas, puertos y plantas industriales.
+- Adecuación de cubiertas, mamparos, cascos y superestructuras navales.
+- Alineación milimétrica y control dimensional.
+
+### 4. Mantenimiento y Recuperación de Válvulas
+- Mantenimiento preventivo, correctivo y overhaul de válvulas compuerta, globo, bola, mariposa y de retención.
+- Pruebas hidrostáticas y de estanqueidad certificadas.
+- Lapeado de asientos y rectificación de vástagos.
+
+### 5. Mantenimiento de Equipos Rotativos
+- Alineación láser de ejes y líneas de propulsión naval.
+- Mantenimiento de bombas centrífugas, motores principales, reductores, compresores y ventiladores industriales.
+- Análisis vibracional y balanceo dinámico en sitio.
+
+### 6. Sistemas HVAC Navales e Industriales
+- Montaje, mantenimiento y reconversión de sistemas de climatización, ductos de ventilación y refrigeración a bordo y en planta.
+- Control de humedad y renovación de aire para bodegas y cuartos de control.
+
+### 7. Pintura y Sandblasting
+- Preparación de superficies mediante chorro abrasivo (Sandblasting SSPC-SP 10 / NACE 2 / Sa 2.5).
+- Aplicación de esquemas de pintura epóxica, poliuretano y antifouling de grado marino.
+- Medición de espesores de película seca (DFT) y perfil de anclaje.
+
+### 8. Ingeniería Civil e Infraestructura
+- Mantenimiento y construcción de muelles, pilotes, plataformas de concreto, canales de drenaje y cimentaciones de maquinaria pesada.
+
+---
+
+## 3. Normativa y Certificaciones Técnicas
+- **ISO 9001:2015:** Gestión integral de la calidad.
+- **AWS D1.1 - D1.7:** Procedimientos de soldadura homologados (WPS / PQR).
+- **PMI:** Control estricto de cronograma, costos y gestión de riesgos.
+- **IACS:** Estándares de sociedades de clasificación marítima (Lloyd's Register, ABS, Bureau Veritas, DNV).
+
+---
+
+## 4. Preguntas Frecuentes (FAQ)
+- **¿Cuál es la cobertura geográfica de ReNaval?**  
+  Atendemos proyectos a nivel nacional en Colombia (Cartagena, Barranquilla, Santa Marta, Buenaventura y puertos fluviales) con capacidad de desplazamiento internacional en el Caribe.
+- **¿Cómo solicitar una cotización?**  
+  Enviando un mensaje al correo gerencia@renaval.com, escribiendo al WhatsApp +57 311 335 6201 o a través de https://renaval.com/contacto.
+- **¿Manejan atención para reparaciones de emergencia en buques?**  
+  Sí, contamos con cuadrillas técnicas de rápida respuesta 24/7 para reparaciones a flote y mantenimiento correctivo en muelle.
+

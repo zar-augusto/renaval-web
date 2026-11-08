@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://renaval.com/sitemap.xml
+# Directiva Content-Signal para agentes IA y motores de búsqueda
+Content-Signal: search=yes, ai-train=no
 
+# Mapa del sitio
+Sitemap: https://renaval.com/sitemap.xml

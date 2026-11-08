@@ -845,7 +845,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <img src="/images/logo-blanco.png" alt="ReNaval" class="h-9 sm:h-10 w-auto object-contain" />
           </div>
-          <form id="contactForm" action="https://formsubmit.co/gerencia@renaval.com" method="POST" class="flex flex-col gap-4 sm:gap-5">
+          <form id="contactForm" action="https://formsubmit.co/gerencia@renaval.com" method="POST" class="flex flex-col gap-4 sm:gap-5" toolname="solicitar_cotizacion_renaval" tooldescription="Envía una solicitud formal de cotización de ingeniería naval, industrial o civil a gerencia@renaval.com">
             <!-- Honeypot para seguridad contra bots (SPAM) -->
             <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
             <input type="hidden" name="_subject" value="Nueva Solicitud de Cotización - ReNaval">
@@ -854,25 +854,25 @@ import Layout from '../layouts/Layout.astro';
             
             <div>
               <label for="nombre" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Nombre completo *</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required toolparam="nombre" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
               <div>
                 <label for="empresa" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Empresa</label>
-                <input type="text" id="empresa" name="empresa" placeholder="Su empresa" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+                <input type="text" id="empresa" name="empresa" placeholder="Su empresa" toolparam="empresa" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
               </div>
               <div>
                 <label for="telefono" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Teléfono *</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="3XX XXX XXXX" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+                <input type="tel" id="telefono" name="telefono" placeholder="3XX XXX XXXX" required toolparam="telefono" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
               </div>
             </div>
             <div>
               <label for="email" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Correo electrónico *</label>
-              <input type="email" id="email" name="email" placeholder="correo@empresa.com" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
+              <input type="email" id="email" name="email" placeholder="correo@empresa.com" required toolparam="email" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors" />
             </div>
             <div>
               <label for="servicio" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Servicio de interés *</label>
-              <select id="servicio" name="servicio" required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors appearance-none">
+              <select id="servicio" name="servicio" required toolparam="servicio" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors appearance-none">
                 <option value="" disabled selected>Seleccione una solución</option>
                 <option>Asesoría para Proyectos</option>
                 <option>Diseño y Fabricación Metalmecánica</option>
@@ -886,7 +886,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div>
               <label for="mensaje" class="block text-[0.9rem] font-bold text-[#2D3137] mb-2">Descripción del proyecto *</label>
-              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describa brevemente su proyecto o requerimiento..." required class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors resize-y"></textarea>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describa brevemente su proyecto o requerimiento..." required toolparam="mensaje" class="w-full bg-[#F8FAFC] border border-[#e2e8f0] text-[#2D3137] text-base p-3.5 rounded-lg focus:outline-none focus:border-[#00A3E0] focus:ring-1 focus:ring-[#00A3E0] transition-colors resize-y"></textarea>
             </div>
             <button type="submit" id="submitBtn" class="bg-[#0A4B75] text-white font-bold text-base sm:text-[1.05rem] p-4 rounded-lg mt-2 transition-all hover:bg-[#063350] hover:-translate-y-0.5 shadow-[0_4px_12px_rgba(10,75,117,0.2)] btn-shimmer">Enviar Solicitud &rarr;</button>
             <div id="formSuccess" class="hidden bg-green-50 text-green-700 border border-green-200 p-4 rounded-lg text-sm text-center font-medium mt-2">¡Solicitud enviada exitosamente! Hemos recibido sus datos en gerencia@renaval.com y un especialista se pondrá en contacto a la brevedad.</div>
@@ -1012,15 +1012,26 @@ import Layout from '../layouts/Layout.astro';
             </a>
           </p>
           <p class="text-sm mb-2.5">
-            <a href="#inicio" class="text-white/70 hover:text-[#00A3E0] transition-colors flex items-center gap-2 no-underline">
-              <span>🌐</span>
-              <span>www.renaval.com</span>
+            <a href="/contacto" class="text-white/70 hover:text-[#00A3E0] transition-colors flex items-center gap-2 no-underline">
+              <span>📍</span>
+              <span>Página de Contacto</span>
             </a>
           </p>
         </div>
       </div>
-      <div class="border-t border-white/10 py-6 text-center">
-        <p class="text-white/35 text-[0.85rem] m-0">&copy; 2026 ReNaval – Soluciones Integrales de Ingeniería. Todos los derechos reservados.</p>
+      <div class="border-t border-white/10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        <p class="m-0 text-center md:text-left">&copy; 2026 ReNaval – Soluciones Integrales de Ingeniería. Todos los derechos reservados.</p>
+        <div class="flex flex-wrap justify-center gap-3 sm:gap-4 font-medium">
+          <a href="/nosotros" class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline">Nosotros</a>
+          <span>&bull;</span>
+          <a href="/contacto" class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline">Contacto</a>
+          <span>&bull;</span>
+          <a href="/terminos" class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline">Términos y Condiciones</a>
+          <span>&bull;</span>
+          <a href="/privacidad" class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline">Política de Privacidad</a>
+          <span>&bull;</span>
+          <a href="/llms.txt" class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline">llms.txt</a>
+        </div>
       </div>
     </div>
   </footer>
