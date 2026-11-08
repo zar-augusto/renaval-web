@@ -29,8 +29,8 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- HERO -->
   <section class="min-h-screen bg-gradient-to-br from-[#063350] via-[#0A4B75] to-[#1a7ab5] flex flex-col items-center justify-center relative overflow-hidden pt-[110px] px-4 sm:px-6 pb-[70px] scroll-mt-20" id="inicio">
-    <!-- Imagen de obra de fondo con máxima presencia y nitidez -->
-    <div class="absolute inset-0 bg-[url('/images/PHOTO-2026-09-25-07-15-55.jpg')] bg-center bg-cover bg-no-repeat opacity-75 sm:opacity-80 scale-100 animate-hero-bg"></div>
+    <!-- Imagen de obra de fondo optimizada en WebP -->
+    <div class="absolute inset-0 bg-[url('/images/PHOTO-2026-09-25-07-15-55.webp')] bg-center bg-cover bg-no-repeat opacity-75 sm:opacity-80 scale-100 animate-hero-bg"></div>
     <!-- Capa oscura cinematográfica para resaltar la obra y blindar el contraste del texto -->
     <div class="absolute inset-0 bg-[#062438]/55"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-[#062438] via-transparent to-[#062438]/70"></div>
@@ -107,7 +107,10 @@ import Layout from '../layouts/Layout.astro';
             Somos una empresa que proporciona soluciones en el área metalmecánica, mantenimiento a equipos rotativos, sistemas de aire acondicionado y adecuaciones locativas. Contamos con un equipo altamente competitivo, con gran experiencia en la industria para la gestión de procesos y proyectos, generando confianza y entrega de valor en cada operación.
           </p>
           <div class="flex flex-wrap items-center gap-4 pt-2 mb-6 sm:mb-0">
-            <img src="/images/logo-blanco.png" alt="ReNaval Soluciones Integrales" class="h-10 sm:h-12 w-auto object-contain" />
+            <picture>
+              <source srcset="/images/logo-blanco.webp" type="image/webp" />
+              <img src="/images/logo-blanco.png" alt="ReNaval Soluciones Integrales" width="160" height="48" class="h-10 sm:h-12 w-auto object-contain" />
+            </picture>
             <div class="hidden sm:block h-8 w-px bg-slate-200"></div>
             <p class="text-xs text-[#64748b] font-medium leading-relaxed max-w-[280px] m-0">
               Calidad certificada y respaldo técnico en soluciones navales e industriales.
@@ -115,7 +118,10 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
         <div class="reveal-right relative rounded-2xl overflow-hidden shadow-[0_8px_48px_rgba(10,75,117,0.18)] group">
-          <img src="/images/quienes-somos-new.jpg" alt="Equipo ReNaval" class="w-full h-auto block transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+          <picture>
+            <source srcset="/images/quienes-somos-new.webp" type="image/webp" />
+            <img src="/images/quienes-somos-new.jpg" alt="Equipo ReNaval" width="900" height="600" class="w-full h-auto block transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async" />
+          </picture>
           <div class="absolute top-4 right-4 sm:top-5 sm:right-5 bg-[#F2B800] text-[#2D3137] font-bold text-[0.8rem] sm:text-[0.85rem] px-3.5 sm:px-4 py-2 rounded-lg shadow-lg">
             +10 años de experiencia
           </div>
@@ -429,18 +435,18 @@ import Layout from '../layouts/Layout.astro';
   <script>
     (function () {
       const GALLERY = [
-        { src: '/images/PHOTO-2026-09-25-07-15-52.jpg',   label: 'Soldadura Naval',           desc: 'Soldadura en casco de embarcación' },
-        { src: '/images/PHOTO-2026-09-25-07-15-52 2.jpg', label: 'Estructuras Metálicas',     desc: 'Fabricación de estructura metálica en interior' },
-        { src: '/images/PHOTO-2026-09-25-07-16-05 2.jpg', label: 'Mantenimiento de Equipos',  desc: 'Técnico ReNaval en sala de máquinas' },
-        { src: '/images/PHOTO-2026-09-25-07-16-02.jpg',   label: 'Operaciones en Cubierta',   desc: 'Soldador ReNaval trabajando en cubierta' },
-        { src: '/images/PHOTO-2026-09-25-07-15-56 2.jpg', label: 'Fabricación Naval',         desc: 'Estructura naval fabricada y pintada' },
-        { src: '/images/PHOTO-2026-09-25-07-16-05 4.jpg', label: 'Mantenimiento de Válvulas', desc: 'Válvulas industriales restauradas' },
-        { src: '/images/PHOTO-2026-09-25-07-15-55.jpg',   label: 'Reparación de Cascos',      desc: 'Reparación de casco en astillero' },
-        { src: '/images/PHOTO-2026-09-25-07-16-01.jpg',   label: 'Tuberías Industriales',     desc: 'Tuberías en acero inoxidable fabricadas' },
-        { src: '/images/PHOTO-2026-09-25-07-16-05.jpg',   label: 'Overhaul de Válvulas',      desc: 'Válvula restaurada y pintada' },
-        { src: '/images/PHOTO-2026-09-25-07-15-56.jpg',   label: 'Pintura Anticorrosiva',     desc: 'Pintura anticorrosiva en casco de embarcación' },
-        { src: '/images/PHOTO-2026-09-25-07-16-04.jpg',   label: 'Trabajos en Muelle',        desc: 'Trabajo en muelle - soldadura y reparaciones' },
-        { src: '/images/PHOTO-2026-09-25-07-16-04 4.jpg', label: 'Fabricación en Aluminio',   desc: 'Escalera en aluminio para embarcación' },
+        { src: '/images/PHOTO-2026-09-25-07-15-52.webp',   label: 'Soldadura Naval',           desc: 'Soldadura en casco de embarcación' },
+        { src: '/images/PHOTO-2026-09-25-07-15-52 2.webp', label: 'Estructuras Metálicas',     desc: 'Fabricación de estructura metálica en interior' },
+        { src: '/images/PHOTO-2026-09-25-07-16-05 2.webp', label: 'Mantenimiento de Equipos',  desc: 'Técnico ReNaval en sala de máquinas' },
+        { src: '/images/PHOTO-2026-09-25-07-16-02.webp',   label: 'Operaciones en Cubierta',   desc: 'Soldador ReNaval trabajando en cubierta' },
+        { src: '/images/PHOTO-2026-09-25-07-15-56 2.webp', label: 'Fabricación Naval',         desc: 'Estructura naval fabricada y pintada' },
+        { src: '/images/PHOTO-2026-09-25-07-16-05 4.webp', label: 'Mantenimiento de Válvulas', desc: 'Válvulas industriales restauradas' },
+        { src: '/images/PHOTO-2026-09-25-07-15-55.webp',   label: 'Reparación de Cascos',      desc: 'Reparación de casco en astillero' },
+        { src: '/images/PHOTO-2026-09-25-07-16-01.jpg',    label: 'Tuberías Industriales',     desc: 'Tuberías en acero inoxidable fabricadas' },
+        { src: '/images/PHOTO-2026-09-25-07-16-05.webp',   label: 'Overhaul de Válvulas',      desc: 'Válvula restaurada y pintada' },
+        { src: '/images/PHOTO-2026-09-25-07-15-56.webp',   label: 'Pintura Anticorrosiva',     desc: 'Pintura anticorrosiva en casco de embarcación' },
+        { src: '/images/PHOTO-2026-09-25-07-16-04.webp',   label: 'Trabajos en Muelle',        desc: 'Trabajo en muelle - soldadura y reparaciones' },
+        { src: '/images/PHOTO-2026-09-25-07-16-04 4.jpg',  label: 'Fabricación en Aluminio',   desc: 'Escalera en aluminio para embarcación' },
       ];
 
       let idx = 0;
@@ -843,7 +849,10 @@ import Layout from '../layouts/Layout.astro';
               <span class="text-xs font-bold uppercase tracking-wider text-[#00A3E0]">Formulario Oficial</span>
               <h3 class="text-lg font-bold text-[#2D3137]">Solicitud de Cotización</h3>
             </div>
-            <img src="/images/logo-blanco.png" alt="ReNaval" class="h-9 sm:h-10 w-auto object-contain" />
+            <picture>
+              <source srcset="/images/logo-blanco.webp" type="image/webp" />
+              <img src="/images/logo-blanco.png" alt="ReNaval" width="140" height="40" class="h-9 sm:h-10 w-auto object-contain" />
+            </picture>
           </div>
           <form id="contactForm" action="https://formsubmit.co/gerencia@renaval.com" method="POST" class="flex flex-col gap-4 sm:gap-5" toolname="solicitar_cotizacion_renaval" tooldescription="Envía una solicitud formal de cotización de ingeniería naval, industrial o civil a gerencia@renaval.com">
             <!-- Honeypot para seguridad contra bots (SPAM) -->
@@ -920,9 +929,9 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- CTA WHATSAPP -->
   <section class="relative py-16 sm:py-20 overflow-hidden">
-    <!-- Fondo con foto de obra destacada y superposición moderna -->
+    <!-- Fondo con foto de obra destacada y superposición moderna (WebP) -->
     <div class="absolute inset-0 bg-gradient-to-br from-[#063350] via-[#0A4B75] to-[#041c2c]"></div>
-    <div class="absolute inset-0 bg-[url('/images/PHOTO-2026-09-25-07-16-04.jpg')] bg-center bg-cover bg-no-repeat opacity-35"></div>
+    <div class="absolute inset-0 bg-[url('/images/PHOTO-2026-09-25-07-16-04.webp')] bg-center bg-cover bg-no-repeat opacity-35"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-[#063350] via-[#063350]/75 to-[#063350]/80"></div>
 
     <div class="relative max-w-[900px] mx-auto px-4 sm:px-6 text-center reveal-scale">

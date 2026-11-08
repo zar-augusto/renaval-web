@@ -41,10 +41,15 @@ import '../styles/global.css';
 		<link rel="shortcut icon" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 
-		<!-- Fuentes Google (preconnect optimizado) -->
+		<!-- Fuentes Google: preconnect + carga no bloqueante (mejora FCP/LCP) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+		<!-- media="print" onload trick: carga asíncrona, sin bloquear render -->
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" /></noscript>
+		<!-- Preload imagen LCP (hero background) -->
+		<link rel="preload" as="image" href="/images/PHOTO-2026-09-25-07-15-55.webp" type="image/webp" fetchpriority="high" />
 
 		<!-- Structured Data Multi-Tipo (Corporation, LocalBusiness, Services, FAQPage, WebSite) -->
 		<script type="application/ld+json">
@@ -64,6 +69,10 @@ import '../styles/global.css';
 					"telephone": "+573113356201",
 					"address": {
 						"@type": "PostalAddress",
+						"streetAddress": "Zona Portuaria e Industrial",
+						"addressLocality": "Barranquilla",
+						"addressRegion": "Atlántico",
+						"postalCode": "080001",
 						"addressCountry": "CO"
 					},
 					"knowsAbout": [
@@ -84,18 +93,54 @@ import '../styles/global.css';
 				{
 					"@type": "LocalBusiness",
 					"@id": "https://renaval.com/#localbusiness",
-					"name": "ReNaval",
+					"name": "ReNaval – Soluciones Integrales de Ingeniería",
+					"alternateName": "ReNaval",
 					"parentOrganization": { "@id": "https://renaval.com/#corporation" },
 					"url": "https://renaval.com",
+					"logo": "https://renaval.com/images/logo-azul.png",
+					"image": "https://renaval.com/images/quienes-somos-new.webp",
+					"description": "Taller y servicios de ingeniería naval, metalmecánica, mantenimiento electromecánico y obras portuarias en Colombia.",
+					"email": "gerencia@renaval.com",
 					"telephone": "+573113356201",
 					"priceRange": "$$",
 					"currenciesAccepted": "COP, USD",
-					"paymentAccepted": "Transferencia bancaria, Facturación comercial",
+					"paymentAccepted": "Transferencia bancaria, Facturación comercial, Cheque",
 					"openingHours": "Mo-Sa 07:00-18:00",
-					"areaServed": {
-						"@type": "Country",
-						"name": "Colombia"
-					}
+					"address": {
+						"@type": "PostalAddress",
+						"streetAddress": "Zona Portuaria e Industrial",
+						"addressLocality": "Barranquilla",
+						"addressRegion": "Atlántico",
+						"postalCode": "080001",
+						"addressCountry": "CO"
+					},
+					"geo": {
+						"@type": "GeoCoordinates",
+						"latitude": 10.9685,
+						"longitude": -74.7813
+					},
+					"areaServed": [
+						{
+							"@type": "Country",
+							"name": "Colombia"
+						},
+						{
+							"@type": "City",
+							"name": "Barranquilla"
+						},
+						{
+							"@type": "City",
+							"name": "Cartagena"
+						},
+						{
+							"@type": "City",
+							"name": "Santa Marta"
+						},
+						{
+							"@type": "City",
+							"name": "Buenaventura"
+						}
+					]
 				},
 				{
 					"@type": "Service",
