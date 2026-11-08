@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "package:hostinger": "astro build && (cd dist && zip -q -r ../hostinger-public_html.zip .)",
     "preview": "astro preview",
     "astro": "astro"
   },
