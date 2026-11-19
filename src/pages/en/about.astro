@@ -1,0 +1,81 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+  lang="en"
+  title="About Us – ReNaval Engineering"
+  description="Learn more about ReNaval: Colombian engineering company specialized in marine repairs, heavy metalworking, and industrial maintenance."
+  canonical="https://renaval.com/en/about/"
+>
+  <Navbar lang="en" />
+
+  <main class="min-h-screen bg-[#F8FAFC] pt-28 pb-20">
+    <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
+      <!-- Breadcrumb -->
+      <nav class="text-xs text-slate-500 mb-6 flex items-center gap-2" aria-label="Breadcrumb">
+        <a href="/en/" class="hover:text-[#0A4B75] no-underline">Home</a>
+        <span>/</span>
+        <span class="text-[#0A4B75] font-semibold">About Us</span>
+      </nav>
+
+      <div class="bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-10 shadow-sm mb-10">
+        <div class="inline-block text-[0.78rem] font-bold uppercase tracking-widest text-[#00A3E0] bg-[#00A3E0]/10 border border-[#00A3E0]/20 px-4 py-1.5 rounded-full mb-4">
+          Corporate Profile
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#2D3137] mb-6">
+          About Us – ReNaval
+        </h1>
+        <p class="text-lg text-slate-700 leading-relaxed mb-6 font-medium">
+          ReNaval is a multidisciplinary engineering and services company based in Colombia, dedicated to meeting high-precision demands across naval, heavy metalworking, industrial, and civil infrastructure sectors.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          Our foundation is technical excellence, operational rigor, and uncompromising commitment to delivery schedules. Guided by international best practices from the <strong>Project Management Institute (PMI)</strong>, <strong>ISO 9001:2015</strong>, and certified welding codes (<strong>AWS D1.1–D1.7 and IACS classification standards</strong>), we deliver tangible strategic value to every operation.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+          <div class="bg-[#F8FAFC] border border-[#e2e8f0] p-6 rounded-xl">
+            <h3 class="text-[#0A4B75] font-bold text-lg mb-2">Mission</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Deliver high-impact engineering solutions with technical precision, maximizing operational uptime, safety, and performance of our clients’ marine vessels and industrial assets.
+            </p>
+          </div>
+          <div class="bg-[#F8FAFC] border border-[#e2e8f0] p-6 rounded-xl">
+            <h3 class="text-[#0A4B75] font-bold text-lg mb-2">Vision</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Establish ReNaval as the premier technical benchmark and preferred engineering ally for naval and industrial operations across Colombia and the wider Caribbean by 2030.
+            </p>
+          </div>
+          <div class="bg-[#F8FAFC] border border-[#e2e8f0] p-6 rounded-xl">
+            <h3 class="text-[#0A4B75] font-bold text-lg mb-2">Core Values</h3>
+            <ul class="text-slate-600 text-sm space-y-1.5 list-disc pl-4">
+              <li>Engineering precision and rigor</li>
+              <li>Schedule and milestone integrity</li>
+              <li>HSE operational safety and environmental care</li>
+              <li>Commercial transparency and mutual win-win</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 pt-8 mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div>
+            <h4 class="font-bold text-[#2D3137]">Looking to discuss a marine or industrial project?</h4>
+            <p class="text-sm text-slate-500">Our engineering management team will review your specifications promptly.</p>
+          </div>
+          <div class="flex gap-3">
+            <a href="/en/contact/" class="bg-[#0A4B75] text-white px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-[#063350] transition-colors no-underline">
+              Contact Engineering
+            </a>
+            <a href="/en/" class="bg-slate-100 text-slate-700 px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-slate-200 transition-colors no-underline">
+              View Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer lang="en" />
+</Layout>

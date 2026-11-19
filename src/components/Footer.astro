@@ -1,0 +1,240 @@
+---
+import type { Language } from '../i18n/translations';
+import { getTranslations } from '../i18n/translations';
+
+interface Props {
+  lang?: Language;
+}
+
+const { lang = 'es' } = Astro.props;
+const t = getTranslations(lang);
+
+const homeUrl = lang === 'en' ? '/en/' : '/';
+const aboutUrl = lang === 'en' ? '/en/about' : '/nosotros';
+const contactUrl = lang === 'en' ? '/en/contact' : '/contacto';
+const termsUrl = lang === 'en' ? '/en/terms' : '/terminos';
+const privacyUrl = lang === 'en' ? '/en/privacy' : '/privacidad';
+---
+
+<footer class="bg-[#2D3137] pt-14 sm:pt-[72px]">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 pb-12">
+      <!-- Columna 1: Identidad -->
+      <div>
+        <a href={homeUrl} class="inline-block no-underline mb-4">
+          <img
+            src="/images/logo-white.png"
+            alt="ReNaval"
+            width="160"
+            height="48"
+            class="h-11 sm:h-12 w-auto opacity-95 object-contain"
+          />
+        </a>
+        <p class="text-white/55 text-sm leading-relaxed mb-5">
+          {t.footer.description}
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-white/10 text-white/70 text-[0.75rem] font-semibold px-3 py-1 rounded-md">
+            ISO 9001
+          </span>
+          <span class="bg-white/10 text-white/70 text-[0.75rem] font-semibold px-3 py-1 rounded-md">
+            PMI
+          </span>
+          <span class="bg-white/10 text-white/70 text-[0.75rem] font-semibold px-3 py-1 rounded-md">
+            AWS
+          </span>
+          <span class="bg-white/10 text-white/70 text-[0.75rem] font-semibold px-3 py-1 rounded-md">
+            IACS
+          </span>
+        </div>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div>
+        <h4 class="text-white text-base font-bold mb-4 sm:mb-5 pb-2.5 border-b-2 border-white/10">
+          {t.footer.navTitle}
+        </h4>
+        <ul class="list-none flex flex-col gap-2.5 m-0 p-0">
+          <li>
+            <a
+              href={`${homeUrl}#inicio`}
+              class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]"
+            >
+              {t.nav.home}
+            </a>
+          </li>
+          <li>
+            <a
+              href={aboutUrl}
+              rel="about"
+              class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]"
+            >
+              {t.nav.about}
+            </a>
+          </li>
+          <li>
+            <a
+              href={`${homeUrl}#servicios`}
+              class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]"
+            >
+              {t.nav.services}
+            </a>
+          </li>
+          <li>
+            <a
+              href={`${homeUrl}#experiencia`}
+              class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]"
+            >
+              {t.nav.experience}
+            </a>
+          </li>
+          <li>
+            <a
+              href={`${homeUrl}#clientes`}
+              class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]"
+            >
+              {t.nav.clients}
+            </a>
+          </li>
+          <li>
+            <a
+              href={`${homeUrl}#galeria`}
+              class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]"
+            >
+              {t.nav.gallery}
+            </a>
+          </li>
+          <li>
+            <a
+              href={`${homeUrl}#casos-de-exito`}
+              class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]"
+            >
+              {t.nav.cases}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Soluciones Principales -->
+      <div>
+        <h4 class="text-white text-base font-bold mb-4 sm:mb-5 pb-2.5 border-b-2 border-white/10">
+          {t.footer.servicesTitle}
+        </h4>
+        <ul class="list-none flex flex-col gap-2.5 m-0 p-0">
+          {t.services.items.slice(0, 5).map((s) => (
+            <li>
+              <a
+                href={`${homeUrl}#servicios`}
+                class="text-white/55 no-underline text-sm transition-colors hover:text-[#00A3E0]"
+              >
+                {s.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Columna 4: Canales de Contacto -->
+      <div>
+        <h4 class="text-white text-base font-bold mb-4 sm:mb-5 pb-2.5 border-b-2 border-white/10">
+          {t.footer.contactTitle}
+        </h4>
+        <p class="text-sm mb-3">
+          <a
+            href={`https://wa.me/573113356201?text=${encodeURIComponent(
+              lang === 'en'
+                ? 'Hello ReNaval, I would like to request information.'
+                : 'Hola ReNaval, me gustaría solicitar información.'
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white/70 hover:text-[#25D366] transition-colors flex items-center gap-2 no-underline group"
+            aria-label="WhatsApp +57 311 335 6201"
+          >
+            <span class="group-hover:scale-110 transition-transform">📞</span>
+            <span>+57 311 335 6201</span>
+            <span class="text-[0.68rem] bg-[#25D366]/20 text-[#25D366] px-1.5 py-0.5 rounded font-bold">
+              WhatsApp
+            </span>
+          </a>
+        </p>
+        <p class="text-sm mb-3">
+          <a
+            href="tel:+573205419121"
+            class="text-white/70 hover:text-[#00A3E0] transition-colors flex items-center gap-2 no-underline group"
+            aria-label="Call +57 320 541 9121"
+          >
+            <span class="group-hover:scale-110 transition-transform">📱</span>
+            <span>+57 320 541 9121</span>
+          </a>
+        </p>
+        <p class="text-sm mb-3">
+          <a
+            href="mailto:gerencia@renaval.com"
+            class="text-white/70 hover:text-[#00A3E0] transition-colors flex items-center gap-2 no-underline break-all group"
+            aria-label="Send email to gerencia@renaval.com"
+          >
+            <span class="group-hover:scale-110 transition-transform">✉️</span>
+            <span>gerencia@renaval.com</span>
+          </a>
+        </p>
+        <p class="text-sm mb-2.5">
+          <a
+            href={contactUrl}
+            class="text-white/70 hover:text-[#00A3E0] transition-colors flex items-center gap-2 no-underline"
+          >
+            <span>📍</span>
+            <span>{t.footer.contactLink}</span>
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Barra Inferior de Copyright y Enlaces Legales -->
+    <div class="border-t border-white/10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
+      <p class="m-0 text-center md:text-left">
+        &copy; 2026 ReNaval – {t.footer.tagline}. {t.footer.rights}
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 sm:gap-4 font-medium">
+        <a
+          href={aboutUrl}
+          rel="about"
+          class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline"
+        >
+          {t.footer.aboutLink}
+        </a>
+        <span>&bull;</span>
+        <a
+          href={contactUrl}
+          rel="help"
+          class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline"
+        >
+          {t.footer.contactLink}
+        </a>
+        <span>&bull;</span>
+        <a
+          href={termsUrl}
+          rel="terms-of-service"
+          class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline"
+        >
+          {t.footer.termsLink}
+        </a>
+        <span>&bull;</span>
+        <a
+          href={privacyUrl}
+          rel="privacy-policy"
+          class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline"
+        >
+          {t.footer.privacyLink}
+        </a>
+        <span>&bull;</span>
+        <a
+          href="/llms.txt"
+          class="text-white/60 hover:text-[#00A3E0] transition-colors no-underline"
+        >
+          llms.txt
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

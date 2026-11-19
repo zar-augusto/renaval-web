@@ -1,0 +1,68 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+  lang="en"
+  title="Terms & Conditions – ReNaval"
+  description="Terms and conditions for engineering services, field works, and industrial contracts with ReNaval."
+  canonical="https://renaval.com/en/terms/"
+>
+  <Navbar lang="en" />
+
+  <main class="min-h-screen bg-[#F8FAFC] pt-28 pb-20">
+    <div class="max-w-[900px] mx-auto px-4 sm:px-6">
+      <nav class="text-xs text-slate-500 mb-6 flex items-center gap-2" aria-label="Breadcrumb">
+        <a href="/en/" class="hover:text-[#0A4B75] no-underline">Home</a>
+        <span>/</span>
+        <span class="text-[#0A4B75] font-semibold">Terms & Conditions</span>
+      </nav>
+
+      <div class="bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-10 shadow-sm">
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-[#2D3137] mb-2">Terms and Conditions of Service</h1>
+        <p class="text-xs text-slate-400 mb-8">Effective as of 2026 | ReNaval – Comprehensive Engineering Solutions</p>
+
+        <div class="space-y-6 text-sm text-slate-600 leading-relaxed">
+          <section>
+            <h2 class="text-base font-bold text-[#0A4B75] mb-2">1. Scope of Services</h2>
+            <p>
+              ReNaval provides specialized engineering, fabrication, maintenance, and structural assembly services across naval, industrial, and civil domains under technical scopes agreed upon in written commercial proposals.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-base font-bold text-[#0A4B75] mb-2">2. Technical Standards and Quality Assurance</h2>
+            <p>
+              All works adhere to applicable technical codes, including AWS D1.1 through D1.7 for welding, ISO 9001:2015 quality procedures, and IACS classification guidelines for maritime vessels. Quality inspection dossiers (dossier de calidad), WPS, and PQR are provided upon project completion.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-base font-bold text-[#0A4B75] mb-2">3. HSE and Maritime Regulations</h2>
+            <p>
+              Work performed in workshops, operational berths, or onboard strictly adheres to Occupational Health, Safety, and Environmental (HSE) protocols, complying with the General Maritime Directorate (DIMAR) and Colombian legal frameworks.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-base font-bold text-[#0A4B75] mb-2">4. Quotations and Commercial Terms</h2>
+            <p>
+              Quotations issued via our official website, email (gerencia@renaval.com), or formal proposals are valid for thirty (30) calendar days unless otherwise stated. Execution schedules commence upon formal purchase order and site access authorization.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-base font-bold text-[#0A4B75] mb-2">5. Warranties and Liability</h2>
+            <p>
+              ReNaval warrants all fabrication and repair services against workmanship defects in accordance with certified engineering practices. Warranties do not cover damage caused by abnormal operation, lack of maintenance by the operator, or unauthorized third-party modifications.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer lang="en" />
+</Layout>

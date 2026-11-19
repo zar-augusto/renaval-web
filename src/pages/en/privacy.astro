@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout
+  lang="en"
+  title="Privacy Policy – ReNaval"
+  description="Privacy policy and data protection guidelines for clients, vendors, and users of ReNaval."
+  canonical="https://renaval.com/en/privacy/"
+>
+  <Navbar lang="en" />
+
+  <main class="min-h-screen bg-[#F8FAFC] pt-28 pb-20">
+    <div class="max-w-[900px] mx-auto px-4 sm:px-6">
+      <nav class="text-xs text-slate-500 mb-6 flex items-center gap-2" aria-label="Breadcrumb">
+        <a href="/en/" class="hover:text-[#0A4B75] no-underline">Home</a>
+        <span>/</span>
+        <span class="text-[#0A4B75] font-semibold">Privacy Policy</span>
+      </nav>
+
+      <div class="bg-white border border-[#e2e8f0] rounded-2xl p-6 sm:p-10 shadow-sm">
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-[#2D3137] mb-2">Privacy & Data Protection Policy</h1>
+        <p class="text-xs text-slate-400 mb-8">In accordance with Law 1581 of 2012 (Republic of Colombia) | ReNaval</p>
+
+        <div class="space-y-6 text-sm text-slate-600 leading-relaxed">
+          <section>
+            <h2 class="text-base font-bold text-[#0A4B75] mb-2">1. Data Controller</h2>
+            <p>
+              <strong>ReNaval – Soluciones Integrales de Ingeniería</strong>, domiciled in Barranquilla, Colombia, is the data controller responsible for personal and commercial information collected through this website and official business channels.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-base font-bold text-[#0A4B75] mb-2">2. Purpose of Data Collection</h2>
+            <p>
+              Information collected via contact and quote forms (name, company, email, telephone, project details) is used exclusively for:
+            </p>
+            <ul class="list-disc pl-5 mt-2 space-y-1">
+              <li>Preparing and submitting engineering proposals and commercial quotations.</li>
+              <li>Coordinating field technical surveys and project operations.</li>
+              <li>Customer service and contractual communications.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-base font-bold text-[#0A4B75] mb-2">3. Data Security and Confidentiality</h2>
+            <p>
+              ReNaval adopts strict administrative, technical, and physical safeguards to prevent unauthorized access, alteration, or disclosure of submitted information. Technical specifications and project scopes are treated under strict commercial confidentiality.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-base font-bold text-[#0A4B75] mb-2">4. Exercise of Rights (Habeas Data)</h2>
+            <p>
+              Data subjects may at any time exercise their rights to know, update, rectify, or request deletion of their personal data by emailing <strong>gerencia@renaval.com</strong>.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer lang="en" />
+</Layout>
